@@ -1,0 +1,2342 @@
+﻿Exportfile for AOT version 1.0 or later
+Formatversion: 1
+
+***Element: SRP
+
+; Microsoft Dynamics AX REPORT : Massey_VendorPayment unloaded
+; --------------------------------------------------------------------------------
+  VERSION 1
+  
+  REPORT #Massey_VendorPayment
+    PROPERTIES
+      Name                #Massey_VendorPayment
+      Origin              #{0E1367AB-52B8-4876-B154-E2E813B7320A}
+    ENDPROPERTIES
+    
+    CROSSREFERENCES
+#<CrossReferenceInfo>
+#    <CrossReferenceEntry>
+#        <ReferencedAotObjectName>Massey_PaymentDP</ReferencedAotObjectName>
+#        <xrefKind>10</xrefKind>
+#        <XrefReference>2</XrefReference>
+#    </CrossReferenceEntry>
+#    <CrossReferenceEntry>
+#        <ReferencedAotObjectName>Massey_PaymentDP.Massey_PaymentTmp</ReferencedAotObjectName>
+#        <xrefKind>11</xrefKind>
+#        <XrefReference>4</XrefReference>
+#    </CrossReferenceEntry>
+#    <CrossReferenceEntry>
+#        <ReferencedAotObjectName>Massey_PaymentDP.processReport</ReferencedAotObjectName>
+#        <xrefKind>11</xrefKind>
+#        <XrefReference>4</XrefReference>
+#    </CrossReferenceEntry>
+#    <CrossReferenceEntry>
+#        <ReferencedAotObjectName>Massey_PaymentTmp.AccountNum</ReferencedAotObjectName>
+#        <xrefKind>2</xrefKind>
+#        <XrefReference>1</XrefReference>
+#    </CrossReferenceEntry>
+#    <CrossReferenceEntry>
+#        <ReferencedAotObjectName>Massey_PaymentTmp</ReferencedAotObjectName>
+#        <xrefKind>1</xrefKind>
+#        <XrefReference>1</XrefReference>
+#    </CrossReferenceEntry>
+#    <CrossReferenceEntry>
+#        <ReferencedAotObjectName>Massey_PaymentTmp.AmountMST</ReferencedAotObjectName>
+#        <xrefKind>2</xrefKind>
+#        <XrefReference>1</XrefReference>
+#    </CrossReferenceEntry>
+#    <CrossReferenceEntry>
+#        <ReferencedAotObjectName>Massey_PaymentTmp.Name</ReferencedAotObjectName>
+#        <xrefKind>2</xrefKind>
+#        <XrefReference>1</XrefReference>
+#    </CrossReferenceEntry>
+#    <CrossReferenceEntry>
+#        <ReferencedAotObjectName>Massey_PaymentTmp.Tax1099Box</ReferencedAotObjectName>
+#        <xrefKind>2</xrefKind>
+#        <XrefReference>1</XrefReference>
+#    </CrossReferenceEntry>
+#    <CrossReferenceEntry>
+#        <ReferencedAotObjectName>Massey_PaymentTmp.Tax1099RegNum</ReferencedAotObjectName>
+#        <xrefKind>2</xrefKind>
+#        <XrefReference>1</XrefReference>
+#    </CrossReferenceEntry>
+#    <CrossReferenceEntry>
+#        <ReferencedAotObjectName>Massey_PaymentTmp.VendGroup</ReferencedAotObjectName>
+#        <xrefKind>2</xrefKind>
+#        <XrefReference>1</XrefReference>
+#    </CrossReferenceEntry>
+#    <CrossReferenceEntry>
+#        <ReferencedAotObjectName>@SYS5209</ReferencedAotObjectName>
+#        <xrefKind>19</xrefKind>
+#        <XrefReference>2</XrefReference>
+#    </CrossReferenceEntry>
+#    <CrossReferenceEntry>
+#        <ReferencedAotObjectName>@SYS14656</ReferencedAotObjectName>
+#        <xrefKind>19</xrefKind>
+#        <XrefReference>2</XrefReference>
+#    </CrossReferenceEntry>
+#    <CrossReferenceEntry>
+#        <ReferencedAotObjectName>Massey_PaymentTmp.AccountNum</ReferencedAotObjectName>
+#        <xrefKind>2</xrefKind>
+#        <XrefReference>2</XrefReference>
+#    </CrossReferenceEntry>
+#    <CrossReferenceEntry>
+#        <ReferencedAotObjectName>Massey_PaymentTmp</ReferencedAotObjectName>
+#        <xrefKind>1</xrefKind>
+#        <XrefReference>2</XrefReference>
+#    </CrossReferenceEntry>
+#    <CrossReferenceEntry>
+#        <ReferencedAotObjectName>Massey_PaymentTmp.Name</ReferencedAotObjectName>
+#        <xrefKind>2</xrefKind>
+#        <XrefReference>2</XrefReference>
+#    </CrossReferenceEntry>
+#    <CrossReferenceEntry>
+#        <ReferencedAotObjectName>Massey_PaymentTmp.VendGroup</ReferencedAotObjectName>
+#        <xrefKind>2</xrefKind>
+#        <XrefReference>2</XrefReference>
+#    </CrossReferenceEntry>
+#    <CrossReferenceEntry>
+#        <ReferencedAotObjectName>Massey_PaymentTmp.Tax1099RegNum</ReferencedAotObjectName>
+#        <xrefKind>2</xrefKind>
+#        <XrefReference>2</XrefReference>
+#    </CrossReferenceEntry>
+#    <CrossReferenceEntry>
+#        <ReferencedAotObjectName>Massey_PaymentTmp.Tax1099Box</ReferencedAotObjectName>
+#        <xrefKind>2</xrefKind>
+#        <XrefReference>2</XrefReference>
+#    </CrossReferenceEntry>
+#    <CrossReferenceEntry>
+#        <ReferencedAotObjectName>Massey_PaymentTmp.AmountMST</ReferencedAotObjectName>
+#        <xrefKind>2</xrefKind>
+#        <XrefReference>2</XrefReference>
+#    </CrossReferenceEntry>
+#</CrossReferenceInfo>
+    ENDCROSSREFERENCES
+    
+    MOXL 114068
+#<?xml version="1.0" encoding="utf-8" ?>
+#<Reports Version="6.2.15.0">
+#  <Report Name="Massey_VendorPayment">
+#    <DataSet Name="Dataset1" DataSourceType="ReportDataProvider" Query="SELECT * FROM Massey_PaymentDP.Massey_FixedAssetTmp">
+#      <DataSetField Name="AccountNum" Alias="Massey_PaymentTmp.1.AccountNum" Caption="@SYS14048" DisplayWidth="Auto" UserDefined="False"/>
+#      <DataSetField Name="AmountMST" Alias="Massey_PaymentTmp.1.AmountMST" Caption="@SYS6928" DataType="System.Double" DisplayWidth="Auto" UserDefined="False"/>
+#      <DataSetField Name="Name" Alias="Massey_PaymentTmp.1.Name" Caption="@SYS80991" DisplayWidth="Auto" UserDefined="False"/>
+#      <DataSetField Name="Tax1099Box" Alias="Massey_PaymentTmp.1.Tax1099Box" Caption="@SYS23885" DisplayWidth="Auto" UserDefined="False"/>
+#      <DataSetField Name="Tax1099RegNum" Alias="Massey_PaymentTmp.1.Tax1099RegNum" Caption="@SYS23890" DisplayWidth="Auto" UserDefined="False"/>
+#      <DataSetField Name="VendGroup" Alias="Massey_PaymentTmp.1.VendGroup" Caption="@SYS9253" DisplayWidth="Auto" UserDefined="False"/>
+#      <DataSetParameter Name="AX_PartitionKey" Alias="AX_PartitionKey" DataType="System.String" Parameter=":Massey_VendorPayment.Parameters.AX_PartitionKey"/>
+#      <DataSetParameter Name="AX_CompanyName" Alias="AX_CompanyName" DataType="System.String" Parameter=":Massey_VendorPayment.Parameters.AX_CompanyName"/>
+#      <DataSetParameter Name="AX_UserContext" Alias="AX_UserContext" DataType="System.String" Parameter=":Massey_VendorPayment.Parameters.AX_UserContext"/>
+#      <DataSetParameter Name="AX_RenderingCulture" Alias="AX_RenderingCulture" DataType="System.String" Parameter=":Massey_VendorPayment.Parameters.AX_RenderingCulture"/>
+#      <DataSetParameter Name="AX_ReportContext" Alias="AX_ReportContext" DataType="System.String" Parameter=":Massey_VendorPayment.Parameters.AX_ReportContext"/>
+#      <DataSetParameter Name="AX_RdpPreProcessedId" Alias="AX_RdpPreProcessedId" DataType="System.String" Parameter=":Massey_VendorPayment.Parameters.AX_RdpPreProcessedId"/>
+#      <DataSetParameter Name="FromDate" Alias="FromDate" DataType="System.DateTime" Parameter=":Massey_VendorPayment.Parameters.Dataset1_FromDate"/>
+#      <DataSetParameter Name="ToDate" Alias="ToDate" DataType="System.DateTime" Parameter=":Massey_VendorPayment.Parameters.Dataset1_ToDate"/>
+#    </DataSet>
+#    <ParameterGroup Name="Parameters">
+#      <Parameter Name="AX_PartitionKey" AllowBlank="True" Nullable="True" UserVisibility="Hidden"/>
+#      <Parameter Name="AX_CompanyName" UserVisibility="Hidden">
+#        <UnboundDefault Name="UnboundDefault" Value="=Microsoft.Dynamics.Framework.Reports.BuiltInMethods.GetUserCompany(Parameters!AX_UserContext.Value)"/>
+#      </Parameter>
+#      <Parameter Name="AX_UserContext" AllowBlank="True" Nullable="True" UserVisibility="Hidden"/>
+#      <Parameter Name="AX_RenderingCulture" AllowBlank="True" Nullable="True" UserVisibility="Hidden"/>
+#      <Parameter Name="AX_ReportContext" AllowBlank="True" Nullable="True" UserVisibility="Hidden"/>
+#      <Parameter Name="AX_RdpPreProcessedId" AllowBlank="True" Nullable="True" UserVisibility="Hidden"/>
+#      <Parameter Name="Dataset1_FromDate" DataType="System.DateTime" PromptString="@SYS5209"/>
+#      <Parameter Name="Dataset1_ToDate" DataType="System.DateTime" PromptString="@SYS14656"/>
+#    </ParameterGroup>
+#    <PrecisionDesign Name="PrecisionDesign1" Text="&lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-8&quot;?&gt;
+#&lt;Report xmlns:rd=&quot;http://schemas.microsoft.com/SQLServer/reporting/reportdesigner&quot; xmlns:cl=&quot;http://schemas.microsoft.com/sqlserver/reporting/2010/01/componentdefinition&quot; xmlns=&quot;http://schemas.microsoft.com/sqlserver/reporting/2010/01/reportdefinition&quot;&gt;
+#  &lt;AutoRefresh&gt;0&lt;/AutoRefresh&gt;
+#  &lt;DataSources&gt;
+#    &lt;DataSource Name=&quot;AutoGen__ReportDataProvider&quot;&gt;
+#      &lt;ConnectionProperties&gt;
+#        &lt;DataProvider&gt;AXREPORTDATAPROVIDER&lt;/DataProvider&gt;
+#        &lt;ConnectString /&gt;
+#        &lt;IntegratedSecurity&gt;true&lt;/IntegratedSecurity&gt;
+#      &lt;/ConnectionProperties&gt;
+#      &lt;rd:DataSourceID&gt;15c72cb8-6626-40d5-b654-91ea09a4837b&lt;/rd:DataSourceID&gt;
+#    &lt;/DataSource&gt;
+#  &lt;/DataSources&gt;
+#  &lt;DataSets&gt;
+#    &lt;DataSet Name=&quot;Dataset1&quot;&gt;
+#      &lt;Query&gt;
+#        &lt;DataSourceName&gt;AutoGen__ReportDataProvider&lt;/DataSourceName&gt;
+#        &lt;QueryParameters&gt;
+#          &lt;QueryParameter Name=&quot;AX_PartitionKey&quot;&gt;
+#            &lt;Value&gt;=Parameters!AX_PartitionKey.Value&lt;/Value&gt;
+#          &lt;/QueryParameter&gt;
+#          &lt;QueryParameter Name=&quot;AX_CompanyName&quot;&gt;
+#            &lt;Value&gt;=Parameters!AX_CompanyName.Value&lt;/Value&gt;
+#          &lt;/QueryParameter&gt;
+#          &lt;QueryParameter Name=&quot;AX_UserContext&quot;&gt;
+#            &lt;Value&gt;=Parameters!AX_UserContext.Value&lt;/Value&gt;
+#          &lt;/QueryParameter&gt;
+#          &lt;QueryParameter Name=&quot;AX_RenderingCulture&quot;&gt;
+#            &lt;Value&gt;=Parameters!AX_RenderingCulture.Value&lt;/Value&gt;
+#          &lt;/QueryParameter&gt;
+#          &lt;QueryParameter Name=&quot;AX_ReportContext&quot;&gt;
+#            &lt;Value&gt;=Parameters!AX_ReportContext.Value&lt;/Value&gt;
+#          &lt;/QueryParameter&gt;
+#          &lt;QueryParameter Name=&quot;AX_RdpPreProcessedId&quot;&gt;
+#            &lt;Value&gt;=Parameters!AX_RdpPreProcessedId.Value&lt;/Value&gt;
+#          &lt;/QueryParameter&gt;
+#          &lt;QueryParameter Name=&quot;FromDate&quot;&gt;
+#            &lt;Value&gt;=Parameters!Dataset1_FromDate.Value&lt;/Value&gt;
+#          &lt;/QueryParameter&gt;
+#          &lt;QueryParameter Name=&quot;ToDate&quot;&gt;
+#            &lt;Value&gt;=Parameters!Dataset1_ToDate.Value&lt;/Value&gt;
+#          &lt;/QueryParameter&gt;
+#        &lt;/QueryParameters&gt;
+#        &lt;CommandText&gt;SELECT * FROM Massey_PaymentDP.Massey_FixedAssetTmp&lt;/CommandText&gt;
+#        &lt;rd:UseGenericDesigner&gt;true&lt;/rd:UseGenericDesigner&gt;
+#      &lt;/Query&gt;
+#      &lt;Fields&gt;
+#        &lt;Field Name=&quot;AccountNum&quot;&gt;
+#          &lt;DataField&gt;Massey_PaymentTmp.1.AccountNum&lt;/DataField&gt;
+#          &lt;rd:TypeName&gt;System.String&lt;/rd:TypeName&gt;
+#        &lt;/Field&gt;
+#        &lt;Field Name=&quot;AmountMST&quot;&gt;
+#          &lt;DataField&gt;Massey_PaymentTmp.1.AmountMST&lt;/DataField&gt;
+#          &lt;rd:TypeName&gt;System.Double&lt;/rd:TypeName&gt;
+#        &lt;/Field&gt;
+#        &lt;Field Name=&quot;Name&quot;&gt;
+#          &lt;DataField&gt;Massey_PaymentTmp.1.Name&lt;/DataField&gt;
+#          &lt;rd:TypeName&gt;System.String&lt;/rd:TypeName&gt;
+#        &lt;/Field&gt;
+#        &lt;Field Name=&quot;Tax1099Box&quot;&gt;
+#          &lt;DataField&gt;Massey_PaymentTmp.1.Tax1099Box&lt;/DataField&gt;
+#          &lt;rd:TypeName&gt;System.String&lt;/rd:TypeName&gt;
+#        &lt;/Field&gt;
+#        &lt;Field Name=&quot;Tax1099RegNum&quot;&gt;
+#          &lt;DataField&gt;Massey_PaymentTmp.1.Tax1099RegNum&lt;/DataField&gt;
+#          &lt;rd:TypeName&gt;System.String&lt;/rd:TypeName&gt;
+#        &lt;/Field&gt;
+#        &lt;Field Name=&quot;VendGroup&quot;&gt;
+#          &lt;DataField&gt;Massey_PaymentTmp.1.VendGroup&lt;/DataField&gt;
+#          &lt;rd:TypeName&gt;System.String&lt;/rd:TypeName&gt;
+#        &lt;/Field&gt;
+#      &lt;/Fields&gt;
+#      &lt;rd:DataSetInfo&gt;
+#        &lt;rd:DataSetName&gt;Dataset1&lt;/rd:DataSetName&gt;
+#        &lt;rd:TableName&gt;Fields&lt;/rd:TableName&gt;
+#        &lt;rd:TableAdapterFillMethod&gt;Fill&lt;/rd:TableAdapterFillMethod&gt;
+#        &lt;rd:TableAdapterGetDataMethod&gt;GetData&lt;/rd:TableAdapterGetDataMethod&gt;
+#        &lt;rd:TableAdapterName&gt;FieldsTableAdapter&lt;/rd:TableAdapterName&gt;
+#      &lt;/rd:DataSetInfo&gt;
+#    &lt;/DataSet&gt;
+#  &lt;/DataSets&gt;
+#  &lt;ReportSections&gt;
+#    &lt;ReportSection&gt;
+#      &lt;Body&gt;
+#        &lt;ReportItems&gt;
+#          &lt;Tablix Name=&quot;Tablix2&quot;&gt;
+#            &lt;TablixBody&gt;
+#              &lt;TablixColumns&gt;
+#                &lt;TablixColumn&gt;
+#                  &lt;Width&gt;1in&lt;/Width&gt;
+#                &lt;/TablixColumn&gt;
+#                &lt;TablixColumn&gt;
+#                  &lt;Width&gt;1.48833in&lt;/Width&gt;
+#                &lt;/TablixColumn&gt;
+#                &lt;TablixColumn&gt;
+#                  &lt;Width&gt;1in&lt;/Width&gt;
+#                &lt;/TablixColumn&gt;
+#                &lt;TablixColumn&gt;
+#                  &lt;Width&gt;1in&lt;/Width&gt;
+#                &lt;/TablixColumn&gt;
+#                &lt;TablixColumn&gt;
+#                  &lt;Width&gt;1in&lt;/Width&gt;
+#                &lt;/TablixColumn&gt;
+#                &lt;TablixColumn&gt;
+#                  &lt;Width&gt;1in&lt;/Width&gt;
+#                &lt;/TablixColumn&gt;
+#              &lt;/TablixColumns&gt;
+#              &lt;TablixRows&gt;
+#                &lt;TablixRow&gt;
+#                  &lt;Height&gt;0.25in&lt;/Height&gt;
+#                  &lt;TablixCells&gt;
+#                    &lt;TablixCell&gt;
+#                      &lt;CellContents&gt;
+#                        &lt;Textbox Name=&quot;Textbox5&quot;&gt;
+#                          &lt;CanGrow&gt;true&lt;/CanGrow&gt;
+#                          &lt;KeepTogether&gt;true&lt;/KeepTogether&gt;
+#                          &lt;Paragraphs&gt;
+#                            &lt;Paragraph&gt;
+#                              &lt;TextRuns&gt;
+#                                &lt;TextRun&gt;
+#                                  &lt;Value&gt;Account Num&lt;/Value&gt;
+#                                  &lt;Style&gt;
+#                                    &lt;FontFamily&gt;Segoe UI&lt;/FontFamily&gt;
+#                                    &lt;FontSize&gt;9pt&lt;/FontSize&gt;
+#                                    &lt;FontWeight&gt;Bold&lt;/FontWeight&gt;
+#                                  &lt;/Style&gt;
+#                                &lt;/TextRun&gt;
+#                              &lt;/TextRuns&gt;
+#                              &lt;Style /&gt;
+#                            &lt;/Paragraph&gt;
+#                          &lt;/Paragraphs&gt;
+#                          &lt;rd:DefaultName&gt;Textbox5&lt;/rd:DefaultName&gt;
+#                          &lt;Style&gt;
+#                            &lt;Border&gt;
+#                              &lt;Color&gt;LightGrey&lt;/Color&gt;
+#                              &lt;Style&gt;Solid&lt;/Style&gt;
+#                            &lt;/Border&gt;
+#                            &lt;PaddingLeft&gt;2pt&lt;/PaddingLeft&gt;
+#                            &lt;PaddingRight&gt;2pt&lt;/PaddingRight&gt;
+#                            &lt;PaddingTop&gt;2pt&lt;/PaddingTop&gt;
+#                            &lt;PaddingBottom&gt;2pt&lt;/PaddingBottom&gt;
+#                          &lt;/Style&gt;
+#                        &lt;/Textbox&gt;
+#                      &lt;/CellContents&gt;
+#                    &lt;/TablixCell&gt;
+#                    &lt;TablixCell&gt;
+#                      &lt;CellContents&gt;
+#                        &lt;Textbox Name=&quot;Textbox18&quot;&gt;
+#                          &lt;CanGrow&gt;true&lt;/CanGrow&gt;
+#                          &lt;KeepTogether&gt;true&lt;/KeepTogether&gt;
+#                          &lt;Paragraphs&gt;
+#                            &lt;Paragraph&gt;
+#                              &lt;TextRuns&gt;
+#                                &lt;TextRun&gt;
+#                                  &lt;Value&gt;Name&lt;/Value&gt;
+#                                  &lt;Style&gt;
+#                                    &lt;FontFamily&gt;Segoe UI&lt;/FontFamily&gt;
+#                                    &lt;FontSize&gt;9pt&lt;/FontSize&gt;
+#                                    &lt;FontWeight&gt;Bold&lt;/FontWeight&gt;
+#                                  &lt;/Style&gt;
+#                                &lt;/TextRun&gt;
+#                              &lt;/TextRuns&gt;
+#                              &lt;Style /&gt;
+#                            &lt;/Paragraph&gt;
+#                          &lt;/Paragraphs&gt;
+#                          &lt;rd:DefaultName&gt;Textbox18&lt;/rd:DefaultName&gt;
+#                          &lt;Style&gt;
+#                            &lt;Border&gt;
+#                              &lt;Color&gt;LightGrey&lt;/Color&gt;
+#                              &lt;Style&gt;Solid&lt;/Style&gt;
+#                            &lt;/Border&gt;
+#                            &lt;PaddingLeft&gt;2pt&lt;/PaddingLeft&gt;
+#                            &lt;PaddingRight&gt;2pt&lt;/PaddingRight&gt;
+#                            &lt;PaddingTop&gt;2pt&lt;/PaddingTop&gt;
+#                            &lt;PaddingBottom&gt;2pt&lt;/PaddingBottom&gt;
+#                          &lt;/Style&gt;
+#                        &lt;/Textbox&gt;
+#                      &lt;/CellContents&gt;
+#                    &lt;/TablixCell&gt;
+#                    &lt;TablixCell&gt;
+#                      &lt;CellContents&gt;
+#                        &lt;Textbox Name=&quot;Textbox11&quot;&gt;
+#                          &lt;CanGrow&gt;true&lt;/CanGrow&gt;
+#                          &lt;KeepTogether&gt;true&lt;/KeepTogether&gt;
+#                          &lt;Paragraphs&gt;
+#                            &lt;Paragraph&gt;
+#                              &lt;TextRuns&gt;
+#                                &lt;TextRun&gt;
+#                                  &lt;Value&gt;Vend Group&lt;/Value&gt;
+#                                  &lt;Style&gt;
+#                                    &lt;FontFamily&gt;Segoe UI&lt;/FontFamily&gt;
+#                                    &lt;FontSize&gt;9pt&lt;/FontSize&gt;
+#                                    &lt;FontWeight&gt;Bold&lt;/FontWeight&gt;
+#                                  &lt;/Style&gt;
+#                                &lt;/TextRun&gt;
+#                              &lt;/TextRuns&gt;
+#                              &lt;Style /&gt;
+#                            &lt;/Paragraph&gt;
+#                          &lt;/Paragraphs&gt;
+#                          &lt;rd:DefaultName&gt;Textbox11&lt;/rd:DefaultName&gt;
+#                          &lt;Style&gt;
+#                            &lt;Border&gt;
+#                              &lt;Color&gt;LightGrey&lt;/Color&gt;
+#                              &lt;Style&gt;Solid&lt;/Style&gt;
+#                            &lt;/Border&gt;
+#                            &lt;PaddingLeft&gt;2pt&lt;/PaddingLeft&gt;
+#                            &lt;PaddingRight&gt;2pt&lt;/PaddingRight&gt;
+#                            &lt;PaddingTop&gt;2pt&lt;/PaddingTop&gt;
+#                            &lt;PaddingBottom&gt;2pt&lt;/PaddingBottom&gt;
+#                          &lt;/Style&gt;
+#                        &lt;/Textbox&gt;
+#                      &lt;/CellContents&gt;
+#                    &lt;/TablixCell&gt;
+#                    &lt;TablixCell&gt;
+#                      &lt;CellContents&gt;
+#                        &lt;Textbox Name=&quot;Textbox13&quot;&gt;
+#                          &lt;CanGrow&gt;true&lt;/CanGrow&gt;
+#                          &lt;KeepTogether&gt;true&lt;/KeepTogether&gt;
+#                          &lt;Paragraphs&gt;
+#                            &lt;Paragraph&gt;
+#                              &lt;TextRuns&gt;
+#                                &lt;TextRun&gt;
+#                                  &lt;Value&gt;Tax1099Reg Num&lt;/Value&gt;
+#                                  &lt;Style&gt;
+#                                    &lt;FontFamily&gt;Segoe UI&lt;/FontFamily&gt;
+#                                    &lt;FontSize&gt;9pt&lt;/FontSize&gt;
+#                                    &lt;FontWeight&gt;Bold&lt;/FontWeight&gt;
+#                                  &lt;/Style&gt;
+#                                &lt;/TextRun&gt;
+#                              &lt;/TextRuns&gt;
+#                              &lt;Style /&gt;
+#                            &lt;/Paragraph&gt;
+#                          &lt;/Paragraphs&gt;
+#                          &lt;rd:DefaultName&gt;Textbox13&lt;/rd:DefaultName&gt;
+#                          &lt;Style&gt;
+#                            &lt;Border&gt;
+#                              &lt;Color&gt;LightGrey&lt;/Color&gt;
+#                              &lt;Style&gt;Solid&lt;/Style&gt;
+#                            &lt;/Border&gt;
+#                            &lt;PaddingLeft&gt;2pt&lt;/PaddingLeft&gt;
+#                            &lt;PaddingRight&gt;2pt&lt;/PaddingRight&gt;
+#                            &lt;PaddingTop&gt;2pt&lt;/PaddingTop&gt;
+#                            &lt;PaddingBottom&gt;2pt&lt;/PaddingBottom&gt;
+#                          &lt;/Style&gt;
+#                        &lt;/Textbox&gt;
+#                      &lt;/CellContents&gt;
+#                    &lt;/TablixCell&gt;
+#                    &lt;TablixCell&gt;
+#                      &lt;CellContents&gt;
+#                        &lt;Textbox Name=&quot;Textbox15&quot;&gt;
+#                          &lt;CanGrow&gt;true&lt;/CanGrow&gt;
+#                          &lt;KeepTogether&gt;true&lt;/KeepTogether&gt;
+#                          &lt;Paragraphs&gt;
+#                            &lt;Paragraph&gt;
+#                              &lt;TextRuns&gt;
+#                                &lt;TextRun&gt;
+#                                  &lt;Value&gt;Tax1099Box&lt;/Value&gt;
+#                                  &lt;Style&gt;
+#                                    &lt;FontFamily&gt;Segoe UI&lt;/FontFamily&gt;
+#                                    &lt;FontSize&gt;9pt&lt;/FontSize&gt;
+#                                    &lt;FontWeight&gt;Bold&lt;/FontWeight&gt;
+#                                  &lt;/Style&gt;
+#                                &lt;/TextRun&gt;
+#                              &lt;/TextRuns&gt;
+#                              &lt;Style /&gt;
+#                            &lt;/Paragraph&gt;
+#                          &lt;/Paragraphs&gt;
+#                          &lt;rd:DefaultName&gt;Textbox15&lt;/rd:DefaultName&gt;
+#                          &lt;Style&gt;
+#                            &lt;Border&gt;
+#                              &lt;Color&gt;LightGrey&lt;/Color&gt;
+#                              &lt;Style&gt;Solid&lt;/Style&gt;
+#                            &lt;/Border&gt;
+#                            &lt;PaddingLeft&gt;2pt&lt;/PaddingLeft&gt;
+#                            &lt;PaddingRight&gt;2pt&lt;/PaddingRight&gt;
+#                            &lt;PaddingTop&gt;2pt&lt;/PaddingTop&gt;
+#                            &lt;PaddingBottom&gt;2pt&lt;/PaddingBottom&gt;
+#                          &lt;/Style&gt;
+#                        &lt;/Textbox&gt;
+#                      &lt;/CellContents&gt;
+#                    &lt;/TablixCell&gt;
+#                    &lt;TablixCell&gt;
+#                      &lt;CellContents&gt;
+#                        &lt;Textbox Name=&quot;Textbox20&quot;&gt;
+#                          &lt;CanGrow&gt;true&lt;/CanGrow&gt;
+#                          &lt;KeepTogether&gt;true&lt;/KeepTogether&gt;
+#                          &lt;Paragraphs&gt;
+#                            &lt;Paragraph&gt;
+#                              &lt;TextRuns&gt;
+#                                &lt;TextRun&gt;
+#                                  &lt;Value&gt;Amount MST&lt;/Value&gt;
+#                                  &lt;Style&gt;
+#                                    &lt;FontFamily&gt;Segoe UI&lt;/FontFamily&gt;
+#                                    &lt;FontSize&gt;9pt&lt;/FontSize&gt;
+#                                    &lt;FontWeight&gt;Bold&lt;/FontWeight&gt;
+#                                  &lt;/Style&gt;
+#                                &lt;/TextRun&gt;
+#                              &lt;/TextRuns&gt;
+#                              &lt;Style /&gt;
+#                            &lt;/Paragraph&gt;
+#                          &lt;/Paragraphs&gt;
+#                          &lt;rd:DefaultName&gt;Textbox20&lt;/rd:DefaultName&gt;
+#                          &lt;Style&gt;
+#                            &lt;Border&gt;
+#                              &lt;Color&gt;LightGrey&lt;/Color&gt;
+#                              &lt;Style&gt;Solid&lt;/Style&gt;
+#                            &lt;/Border&gt;
+#                            &lt;PaddingLeft&gt;2pt&lt;/PaddingLeft&gt;
+#                            &lt;PaddingRight&gt;2pt&lt;/PaddingRight&gt;
+#                            &lt;PaddingTop&gt;2pt&lt;/PaddingTop&gt;
+#                            &lt;PaddingBottom&gt;2pt&lt;/PaddingBottom&gt;
+#                          &lt;/Style&gt;
+#                        &lt;/Textbox&gt;
+#                      &lt;/CellContents&gt;
+#                    &lt;/TablixCell&gt;
+#                  &lt;/TablixCells&gt;
+#                &lt;/TablixRow&gt;
+#                &lt;TablixRow&gt;
+#                  &lt;Height&gt;0.25in&lt;/Height&gt;
+#                  &lt;TablixCells&gt;
+#                    &lt;TablixCell&gt;
+#                      &lt;CellContents&gt;
+#                        &lt;Textbox Name=&quot;AccountNum&quot;&gt;
+#                          &lt;CanGrow&gt;true&lt;/CanGrow&gt;
+#                          &lt;KeepTogether&gt;true&lt;/KeepTogether&gt;
+#                          &lt;Paragraphs&gt;
+#                            &lt;Paragraph&gt;
+#                              &lt;TextRuns&gt;
+#                                &lt;TextRun&gt;
+#                                  &lt;Value&gt;=Fields!AccountNum.Value&lt;/Value&gt;
+#                                  &lt;Style&gt;
+#                                    &lt;FontFamily&gt;Segoe UI&lt;/FontFamily&gt;
+#                                    &lt;FontSize&gt;9pt&lt;/FontSize&gt;
+#                                  &lt;/Style&gt;
+#                                &lt;/TextRun&gt;
+#                              &lt;/TextRuns&gt;
+#                              &lt;Style /&gt;
+#                            &lt;/Paragraph&gt;
+#                          &lt;/Paragraphs&gt;
+#                          &lt;rd:DefaultName&gt;AccountNum&lt;/rd:DefaultName&gt;
+#                          &lt;CustomProperties&gt;
+#                            &lt;CustomProperty&gt;
+#                              &lt;Name&gt;AXDataType&lt;/Name&gt;
+#                              &lt;Value&gt;String&lt;/Value&gt;
+#                            &lt;/CustomProperty&gt;
+#                            &lt;CustomProperty&gt;
+#                              &lt;Name&gt;AXEDTFormat&lt;/Name&gt;
+#                              &lt;Value&gt;Massey_PaymentTmp.AccountNum&lt;/Value&gt;
+#                            &lt;/CustomProperty&gt;
+#                            &lt;CustomProperty&gt;
+#                              &lt;Name&gt;AXEDTTextAlign&lt;/Name&gt;
+#                              &lt;Value&gt;Massey_PaymentTmp.AccountNum&lt;/Value&gt;
+#                            &lt;/CustomProperty&gt;
+#                            &lt;CustomProperty&gt;
+#                              &lt;Name&gt;AXEDTDirection&lt;/Name&gt;
+#                              &lt;Value&gt;Massey_PaymentTmp.AccountNum&lt;/Value&gt;
+#                            &lt;/CustomProperty&gt;
+#                          &lt;/CustomProperties&gt;
+#                          &lt;Style&gt;
+#                            &lt;Border&gt;
+#                              &lt;Color&gt;LightGrey&lt;/Color&gt;
+#                              &lt;Style&gt;Solid&lt;/Style&gt;
+#                            &lt;/Border&gt;
+#                            &lt;PaddingLeft&gt;2pt&lt;/PaddingLeft&gt;
+#                            &lt;PaddingRight&gt;2pt&lt;/PaddingRight&gt;
+#                            &lt;PaddingTop&gt;2pt&lt;/PaddingTop&gt;
+#                            &lt;PaddingBottom&gt;2pt&lt;/PaddingBottom&gt;
+#                          &lt;/Style&gt;
+#                        &lt;/Textbox&gt;
+#                      &lt;/CellContents&gt;
+#                    &lt;/TablixCell&gt;
+#                    &lt;TablixCell&gt;
+#                      &lt;CellContents&gt;
+#                        &lt;Textbox Name=&quot;Name2&quot;&gt;
+#                          &lt;CanGrow&gt;true&lt;/CanGrow&gt;
+#                          &lt;KeepTogether&gt;true&lt;/KeepTogether&gt;
+#                          &lt;Paragraphs&gt;
+#                            &lt;Paragraph&gt;
+#                              &lt;TextRuns&gt;
+#                                &lt;TextRun&gt;
+#                                  &lt;Value&gt;=Fields!Name.Value&lt;/Value&gt;
+#                                  &lt;Style&gt;
+#                                    &lt;FontFamily&gt;Segoe UI&lt;/FontFamily&gt;
+#                                    &lt;FontSize&gt;9pt&lt;/FontSize&gt;
+#                                  &lt;/Style&gt;
+#                                &lt;/TextRun&gt;
+#                              &lt;/TextRuns&gt;
+#                              &lt;Style /&gt;
+#                            &lt;/Paragraph&gt;
+#                          &lt;/Paragraphs&gt;
+#                          &lt;rd:DefaultName&gt;Name2&lt;/rd:DefaultName&gt;
+#                          &lt;CustomProperties&gt;
+#                            &lt;CustomProperty&gt;
+#                              &lt;Name&gt;AXDataType&lt;/Name&gt;
+#                              &lt;Value&gt;String&lt;/Value&gt;
+#                            &lt;/CustomProperty&gt;
+#                            &lt;CustomProperty&gt;
+#                              &lt;Name&gt;AXEDTFormat&lt;/Name&gt;
+#                              &lt;Value&gt;Massey_PaymentTmp.Name&lt;/Value&gt;
+#                            &lt;/CustomProperty&gt;
+#                            &lt;CustomProperty&gt;
+#                              &lt;Name&gt;AXEDTTextAlign&lt;/Name&gt;
+#                              &lt;Value&gt;Massey_PaymentTmp.Name&lt;/Value&gt;
+#                            &lt;/CustomProperty&gt;
+#                            &lt;CustomProperty&gt;
+#                              &lt;Name&gt;AXEDTDirection&lt;/Name&gt;
+#                              &lt;Value&gt;Massey_PaymentTmp.Name&lt;/Value&gt;
+#                            &lt;/CustomProperty&gt;
+#                          &lt;/CustomProperties&gt;
+#                          &lt;Style&gt;
+#                            &lt;Border&gt;
+#                              &lt;Color&gt;LightGrey&lt;/Color&gt;
+#                              &lt;Style&gt;Solid&lt;/Style&gt;
+#                            &lt;/Border&gt;
+#                            &lt;PaddingLeft&gt;2pt&lt;/PaddingLeft&gt;
+#                            &lt;PaddingRight&gt;2pt&lt;/PaddingRight&gt;
+#                            &lt;PaddingTop&gt;2pt&lt;/PaddingTop&gt;
+#                            &lt;PaddingBottom&gt;2pt&lt;/PaddingBottom&gt;
+#                          &lt;/Style&gt;
+#                        &lt;/Textbox&gt;
+#                      &lt;/CellContents&gt;
+#                    &lt;/TablixCell&gt;
+#                    &lt;TablixCell&gt;
+#                      &lt;CellContents&gt;
+#                        &lt;Textbox Name=&quot;VendGroup&quot;&gt;
+#                          &lt;CanGrow&gt;true&lt;/CanGrow&gt;
+#                          &lt;KeepTogether&gt;true&lt;/KeepTogether&gt;
+#                          &lt;Paragraphs&gt;
+#                            &lt;Paragraph&gt;
+#                              &lt;TextRuns&gt;
+#                                &lt;TextRun&gt;
+#                                  &lt;Value&gt;=Fields!VendGroup.Value&lt;/Value&gt;
+#                                  &lt;Style&gt;
+#                                    &lt;FontFamily&gt;Segoe UI&lt;/FontFamily&gt;
+#                                    &lt;FontSize&gt;9pt&lt;/FontSize&gt;
+#                                  &lt;/Style&gt;
+#                                &lt;/TextRun&gt;
+#                              &lt;/TextRuns&gt;
+#                              &lt;Style /&gt;
+#                            &lt;/Paragraph&gt;
+#                          &lt;/Paragraphs&gt;
+#                          &lt;rd:DefaultName&gt;VendGroup&lt;/rd:DefaultName&gt;
+#                          &lt;CustomProperties&gt;
+#                            &lt;CustomProperty&gt;
+#                              &lt;Name&gt;AXDataType&lt;/Name&gt;
+#                              &lt;Value&gt;String&lt;/Value&gt;
+#                            &lt;/CustomProperty&gt;
+#                            &lt;CustomProperty&gt;
+#                              &lt;Name&gt;AXEDTFormat&lt;/Name&gt;
+#                              &lt;Value&gt;Massey_PaymentTmp.VendGroup&lt;/Value&gt;
+#                            &lt;/CustomProperty&gt;
+#                            &lt;CustomProperty&gt;
+#                              &lt;Name&gt;AXEDTTextAlign&lt;/Name&gt;
+#                              &lt;Value&gt;Massey_PaymentTmp.VendGroup&lt;/Value&gt;
+#                            &lt;/CustomProperty&gt;
+#                            &lt;CustomProperty&gt;
+#                              &lt;Name&gt;AXEDTDirection&lt;/Name&gt;
+#                              &lt;Value&gt;Massey_PaymentTmp.VendGroup&lt;/Value&gt;
+#                            &lt;/CustomProperty&gt;
+#                          &lt;/CustomProperties&gt;
+#                          &lt;Style&gt;
+#                            &lt;Border&gt;
+#                              &lt;Color&gt;LightGrey&lt;/Color&gt;
+#                              &lt;Style&gt;Solid&lt;/Style&gt;
+#                            &lt;/Border&gt;
+#                            &lt;PaddingLeft&gt;2pt&lt;/PaddingLeft&gt;
+#                            &lt;PaddingRight&gt;2pt&lt;/PaddingRight&gt;
+#                            &lt;PaddingTop&gt;2pt&lt;/PaddingTop&gt;
+#                            &lt;PaddingBottom&gt;2pt&lt;/PaddingBottom&gt;
+#                          &lt;/Style&gt;
+#                        &lt;/Textbox&gt;
+#                      &lt;/CellContents&gt;
+#                    &lt;/TablixCell&gt;
+#                    &lt;TablixCell&gt;
+#                      &lt;CellContents&gt;
+#                        &lt;Textbox Name=&quot;Tax1099RegNum&quot;&gt;
+#                          &lt;CanGrow&gt;true&lt;/CanGrow&gt;
+#                          &lt;KeepTogether&gt;true&lt;/KeepTogether&gt;
+#                          &lt;Paragraphs&gt;
+#                            &lt;Paragraph&gt;
+#                              &lt;TextRuns&gt;
+#                                &lt;TextRun&gt;
+#                                  &lt;Value&gt;=Fields!Tax1099RegNum.Value&lt;/Value&gt;
+#                                  &lt;Style&gt;
+#                                    &lt;FontFamily&gt;Segoe UI&lt;/FontFamily&gt;
+#                                    &lt;FontSize&gt;9pt&lt;/FontSize&gt;
+#                                  &lt;/Style&gt;
+#                                &lt;/TextRun&gt;
+#                              &lt;/TextRuns&gt;
+#                              &lt;Style /&gt;
+#                            &lt;/Paragraph&gt;
+#                          &lt;/Paragraphs&gt;
+#                          &lt;rd:DefaultName&gt;Tax1099RegNum&lt;/rd:DefaultName&gt;
+#                          &lt;CustomProperties&gt;
+#                            &lt;CustomProperty&gt;
+#                              &lt;Name&gt;AXDataType&lt;/Name&gt;
+#                              &lt;Value&gt;String&lt;/Value&gt;
+#                            &lt;/CustomProperty&gt;
+#                            &lt;CustomProperty&gt;
+#                              &lt;Name&gt;AXEDTFormat&lt;/Name&gt;
+#                              &lt;Value&gt;Massey_PaymentTmp.Tax1099RegNum&lt;/Value&gt;
+#                            &lt;/CustomProperty&gt;
+#                            &lt;CustomProperty&gt;
+#                              &lt;Name&gt;AXEDTTextAlign&lt;/Name&gt;
+#                              &lt;Value&gt;Massey_PaymentTmp.Tax1099RegNum&lt;/Value&gt;
+#                            &lt;/CustomProperty&gt;
+#                            &lt;CustomProperty&gt;
+#                              &lt;Name&gt;AXEDTDirection&lt;/Name&gt;
+#                              &lt;Value&gt;Massey_PaymentTmp.Tax1099RegNum&lt;/Value&gt;
+#                            &lt;/CustomProperty&gt;
+#                          &lt;/CustomProperties&gt;
+#                          &lt;Style&gt;
+#                            &lt;Border&gt;
+#                              &lt;Color&gt;LightGrey&lt;/Color&gt;
+#                              &lt;Style&gt;Solid&lt;/Style&gt;
+#                            &lt;/Border&gt;
+#                            &lt;PaddingLeft&gt;2pt&lt;/PaddingLeft&gt;
+#                            &lt;PaddingRight&gt;2pt&lt;/PaddingRight&gt;
+#                            &lt;PaddingTop&gt;2pt&lt;/PaddingTop&gt;
+#                            &lt;PaddingBottom&gt;2pt&lt;/PaddingBottom&gt;
+#                          &lt;/Style&gt;
+#                        &lt;/Textbox&gt;
+#                      &lt;/CellContents&gt;
+#                    &lt;/TablixCell&gt;
+#                    &lt;TablixCell&gt;
+#                      &lt;CellContents&gt;
+#                        &lt;Textbox Name=&quot;Tax1099Box&quot;&gt;
+#                          &lt;CanGrow&gt;true&lt;/CanGrow&gt;
+#                          &lt;KeepTogether&gt;true&lt;/KeepTogether&gt;
+#                          &lt;Paragraphs&gt;
+#                            &lt;Paragraph&gt;
+#                              &lt;TextRuns&gt;
+#                                &lt;TextRun&gt;
+#                                  &lt;Value&gt;=Fields!Tax1099Box.Value&lt;/Value&gt;
+#                                  &lt;Style&gt;
+#                                    &lt;FontFamily&gt;Segoe UI&lt;/FontFamily&gt;
+#                                    &lt;FontSize&gt;9pt&lt;/FontSize&gt;
+#                                  &lt;/Style&gt;
+#                                &lt;/TextRun&gt;
+#                              &lt;/TextRuns&gt;
+#                              &lt;Style /&gt;
+#                            &lt;/Paragraph&gt;
+#                          &lt;/Paragraphs&gt;
+#                          &lt;rd:DefaultName&gt;Tax1099Box&lt;/rd:DefaultName&gt;
+#                          &lt;CustomProperties&gt;
+#                            &lt;CustomProperty&gt;
+#                              &lt;Name&gt;AXDataType&lt;/Name&gt;
+#                              &lt;Value&gt;String&lt;/Value&gt;
+#                            &lt;/CustomProperty&gt;
+#                            &lt;CustomProperty&gt;
+#                              &lt;Name&gt;AXEDTFormat&lt;/Name&gt;
+#                              &lt;Value&gt;Massey_PaymentTmp.Tax1099Box&lt;/Value&gt;
+#                            &lt;/CustomProperty&gt;
+#                            &lt;CustomProperty&gt;
+#                              &lt;Name&gt;AXEDTTextAlign&lt;/Name&gt;
+#                              &lt;Value&gt;Massey_PaymentTmp.Tax1099Box&lt;/Value&gt;
+#                            &lt;/CustomProperty&gt;
+#                            &lt;CustomProperty&gt;
+#                              &lt;Name&gt;AXEDTDirection&lt;/Name&gt;
+#                              &lt;Value&gt;Massey_PaymentTmp.Tax1099Box&lt;/Value&gt;
+#                            &lt;/CustomProperty&gt;
+#                          &lt;/CustomProperties&gt;
+#                          &lt;Style&gt;
+#                            &lt;Border&gt;
+#                              &lt;Color&gt;LightGrey&lt;/Color&gt;
+#                              &lt;Style&gt;Solid&lt;/Style&gt;
+#                            &lt;/Border&gt;
+#                            &lt;PaddingLeft&gt;2pt&lt;/PaddingLeft&gt;
+#                            &lt;PaddingRight&gt;2pt&lt;/PaddingRight&gt;
+#                            &lt;PaddingTop&gt;2pt&lt;/PaddingTop&gt;
+#                            &lt;PaddingBottom&gt;2pt&lt;/PaddingBottom&gt;
+#                          &lt;/Style&gt;
+#                        &lt;/Textbox&gt;
+#                      &lt;/CellContents&gt;
+#                    &lt;/TablixCell&gt;
+#                    &lt;TablixCell&gt;
+#                      &lt;CellContents&gt;
+#                        &lt;Textbox Name=&quot;AmountMST&quot;&gt;
+#                          &lt;CanGrow&gt;true&lt;/CanGrow&gt;
+#                          &lt;KeepTogether&gt;true&lt;/KeepTogether&gt;
+#                          &lt;Paragraphs&gt;
+#                            &lt;Paragraph&gt;
+#                              &lt;TextRuns&gt;
+#                                &lt;TextRun&gt;
+#                                  &lt;Value&gt;=Fields!AmountMST.Value&lt;/Value&gt;
+#                                  &lt;Style&gt;
+#                                    &lt;FontFamily&gt;Segoe UI&lt;/FontFamily&gt;
+#                                    &lt;FontSize&gt;9pt&lt;/FontSize&gt;
+#                                    &lt;Format&gt;n2&lt;/Format&gt;
+#                                  &lt;/Style&gt;
+#                                &lt;/TextRun&gt;
+#                              &lt;/TextRuns&gt;
+#                              &lt;Style /&gt;
+#                            &lt;/Paragraph&gt;
+#                          &lt;/Paragraphs&gt;
+#                          &lt;rd:DefaultName&gt;AmountMST&lt;/rd:DefaultName&gt;
+#                          &lt;CustomProperties&gt;
+#                            &lt;CustomProperty&gt;
+#                              &lt;Name&gt;AXDataType&lt;/Name&gt;
+#                              &lt;Value&gt;Float&lt;/Value&gt;
+#                            &lt;/CustomProperty&gt;
+#                            &lt;CustomProperty&gt;
+#                              &lt;Name&gt;AXEDTFormat&lt;/Name&gt;
+#                              &lt;Value&gt;Massey_PaymentTmp.AmountMST&lt;/Value&gt;
+#                            &lt;/CustomProperty&gt;
+#                            &lt;CustomProperty&gt;
+#                              &lt;Name&gt;AXEDTTextAlign&lt;/Name&gt;
+#                              &lt;Value&gt;Massey_PaymentTmp.AmountMST&lt;/Value&gt;
+#                            &lt;/CustomProperty&gt;
+#                            &lt;CustomProperty&gt;
+#                              &lt;Name&gt;AXEDTDirection&lt;/Name&gt;
+#                              &lt;Value&gt;Massey_PaymentTmp.AmountMST&lt;/Value&gt;
+#                            &lt;/CustomProperty&gt;
+#                          &lt;/CustomProperties&gt;
+#                          &lt;Style&gt;
+#                            &lt;Border&gt;
+#                              &lt;Color&gt;LightGrey&lt;/Color&gt;
+#                              &lt;Style&gt;Solid&lt;/Style&gt;
+#                            &lt;/Border&gt;
+#                            &lt;PaddingLeft&gt;2pt&lt;/PaddingLeft&gt;
+#                            &lt;PaddingRight&gt;2pt&lt;/PaddingRight&gt;
+#                            &lt;PaddingTop&gt;2pt&lt;/PaddingTop&gt;
+#                            &lt;PaddingBottom&gt;2pt&lt;/PaddingBottom&gt;
+#                          &lt;/Style&gt;
+#                        &lt;/Textbox&gt;
+#                      &lt;/CellContents&gt;
+#                    &lt;/TablixCell&gt;
+#                  &lt;/TablixCells&gt;
+#                &lt;/TablixRow&gt;
+#                &lt;TablixRow&gt;
+#                  &lt;Height&gt;0.25in&lt;/Height&gt;
+#                  &lt;TablixCells&gt;
+#                    &lt;TablixCell&gt;
+#                      &lt;CellContents&gt;
+#                        &lt;Textbox Name=&quot;Textbox8&quot;&gt;
+#                          &lt;CanGrow&gt;true&lt;/CanGrow&gt;
+#                          &lt;KeepTogether&gt;true&lt;/KeepTogether&gt;
+#                          &lt;Paragraphs&gt;
+#                            &lt;Paragraph&gt;
+#                              &lt;TextRuns&gt;
+#                                &lt;TextRun&gt;
+#                                  &lt;Value /&gt;
+#                                  &lt;Style&gt;
+#                                    &lt;FontFamily&gt;Segoe UI&lt;/FontFamily&gt;
+#                                    &lt;FontSize&gt;9pt&lt;/FontSize&gt;
+#                                  &lt;/Style&gt;
+#                                &lt;/TextRun&gt;
+#                              &lt;/TextRuns&gt;
+#                              &lt;Style /&gt;
+#                            &lt;/Paragraph&gt;
+#                          &lt;/Paragraphs&gt;
+#                          &lt;rd:DefaultName&gt;Textbox8&lt;/rd:DefaultName&gt;
+#                          &lt;Style&gt;
+#                            &lt;Border&gt;
+#                              &lt;Color&gt;LightGrey&lt;/Color&gt;
+#                              &lt;Style&gt;Solid&lt;/Style&gt;
+#                            &lt;/Border&gt;
+#                            &lt;PaddingLeft&gt;2pt&lt;/PaddingLeft&gt;
+#                            &lt;PaddingRight&gt;2pt&lt;/PaddingRight&gt;
+#                            &lt;PaddingTop&gt;2pt&lt;/PaddingTop&gt;
+#                            &lt;PaddingBottom&gt;2pt&lt;/PaddingBottom&gt;
+#                          &lt;/Style&gt;
+#                        &lt;/Textbox&gt;
+#                      &lt;/CellContents&gt;
+#                    &lt;/TablixCell&gt;
+#                    &lt;TablixCell&gt;
+#                      &lt;CellContents&gt;
+#                        &lt;Textbox Name=&quot;Textbox9&quot;&gt;
+#                          &lt;CanGrow&gt;true&lt;/CanGrow&gt;
+#                          &lt;KeepTogether&gt;true&lt;/KeepTogether&gt;
+#                          &lt;Paragraphs&gt;
+#                            &lt;Paragraph&gt;
+#                              &lt;TextRuns&gt;
+#                                &lt;TextRun&gt;
+#                                  &lt;Value /&gt;
+#                                  &lt;Style&gt;
+#                                    &lt;FontFamily&gt;Segoe UI&lt;/FontFamily&gt;
+#                                    &lt;FontSize&gt;9pt&lt;/FontSize&gt;
+#                                  &lt;/Style&gt;
+#                                &lt;/TextRun&gt;
+#                              &lt;/TextRuns&gt;
+#                              &lt;Style /&gt;
+#                            &lt;/Paragraph&gt;
+#                          &lt;/Paragraphs&gt;
+#                          &lt;rd:DefaultName&gt;Textbox9&lt;/rd:DefaultName&gt;
+#                          &lt;Style&gt;
+#                            &lt;Border&gt;
+#                              &lt;Color&gt;LightGrey&lt;/Color&gt;
+#                              &lt;Style&gt;Solid&lt;/Style&gt;
+#                            &lt;/Border&gt;
+#                            &lt;PaddingLeft&gt;2pt&lt;/PaddingLeft&gt;
+#                            &lt;PaddingRight&gt;2pt&lt;/PaddingRight&gt;
+#                            &lt;PaddingTop&gt;2pt&lt;/PaddingTop&gt;
+#                            &lt;PaddingBottom&gt;2pt&lt;/PaddingBottom&gt;
+#                          &lt;/Style&gt;
+#                        &lt;/Textbox&gt;
+#                      &lt;/CellContents&gt;
+#                    &lt;/TablixCell&gt;
+#                    &lt;TablixCell&gt;
+#                      &lt;CellContents&gt;
+#                        &lt;Textbox Name=&quot;Textbox10&quot;&gt;
+#                          &lt;CanGrow&gt;true&lt;/CanGrow&gt;
+#                          &lt;KeepTogether&gt;true&lt;/KeepTogether&gt;
+#                          &lt;Paragraphs&gt;
+#                            &lt;Paragraph&gt;
+#                              &lt;TextRuns&gt;
+#                                &lt;TextRun&gt;
+#                                  &lt;Value /&gt;
+#                                  &lt;Style&gt;
+#                                    &lt;FontFamily&gt;Segoe UI&lt;/FontFamily&gt;
+#                                    &lt;FontSize&gt;9pt&lt;/FontSize&gt;
+#                                  &lt;/Style&gt;
+#                                &lt;/TextRun&gt;
+#                              &lt;/TextRuns&gt;
+#                              &lt;Style /&gt;
+#                            &lt;/Paragraph&gt;
+#                          &lt;/Paragraphs&gt;
+#                          &lt;rd:DefaultName&gt;Textbox10&lt;/rd:DefaultName&gt;
+#                          &lt;Style&gt;
+#                            &lt;Border&gt;
+#                              &lt;Color&gt;LightGrey&lt;/Color&gt;
+#                              &lt;Style&gt;Solid&lt;/Style&gt;
+#                            &lt;/Border&gt;
+#                            &lt;PaddingLeft&gt;2pt&lt;/PaddingLeft&gt;
+#                            &lt;PaddingRight&gt;2pt&lt;/PaddingRight&gt;
+#                            &lt;PaddingTop&gt;2pt&lt;/PaddingTop&gt;
+#                            &lt;PaddingBottom&gt;2pt&lt;/PaddingBottom&gt;
+#                          &lt;/Style&gt;
+#                        &lt;/Textbox&gt;
+#                      &lt;/CellContents&gt;
+#                    &lt;/TablixCell&gt;
+#                    &lt;TablixCell&gt;
+#                      &lt;CellContents&gt;
+#                        &lt;Textbox Name=&quot;Textbox12&quot;&gt;
+#                          &lt;CanGrow&gt;true&lt;/CanGrow&gt;
+#                          &lt;KeepTogether&gt;true&lt;/KeepTogether&gt;
+#                          &lt;Paragraphs&gt;
+#                            &lt;Paragraph&gt;
+#                              &lt;TextRuns&gt;
+#                                &lt;TextRun&gt;
+#                                  &lt;Value /&gt;
+#                                  &lt;Style&gt;
+#                                    &lt;FontFamily&gt;Segoe UI&lt;/FontFamily&gt;
+#                                    &lt;FontSize&gt;9pt&lt;/FontSize&gt;
+#                                  &lt;/Style&gt;
+#                                &lt;/TextRun&gt;
+#                              &lt;/TextRuns&gt;
+#                              &lt;Style /&gt;
+#                            &lt;/Paragraph&gt;
+#                          &lt;/Paragraphs&gt;
+#                          &lt;rd:DefaultName&gt;Textbox12&lt;/rd:DefaultName&gt;
+#                          &lt;Style&gt;
+#                            &lt;Border&gt;
+#                              &lt;Color&gt;LightGrey&lt;/Color&gt;
+#                              &lt;Style&gt;Solid&lt;/Style&gt;
+#                            &lt;/Border&gt;
+#                            &lt;PaddingLeft&gt;2pt&lt;/PaddingLeft&gt;
+#                            &lt;PaddingRight&gt;2pt&lt;/PaddingRight&gt;
+#                            &lt;PaddingTop&gt;2pt&lt;/PaddingTop&gt;
+#                            &lt;PaddingBottom&gt;2pt&lt;/PaddingBottom&gt;
+#                          &lt;/Style&gt;
+#                        &lt;/Textbox&gt;
+#                      &lt;/CellContents&gt;
+#                    &lt;/TablixCell&gt;
+#                    &lt;TablixCell&gt;
+#                      &lt;CellContents&gt;
+#                        &lt;Textbox Name=&quot;Textbox14&quot;&gt;
+#                          &lt;CanGrow&gt;true&lt;/CanGrow&gt;
+#                          &lt;KeepTogether&gt;true&lt;/KeepTogether&gt;
+#                          &lt;Paragraphs&gt;
+#                            &lt;Paragraph&gt;
+#                              &lt;TextRuns&gt;
+#                                &lt;TextRun&gt;
+#                                  &lt;Value /&gt;
+#                                  &lt;Style&gt;
+#                                    &lt;FontFamily&gt;Segoe UI&lt;/FontFamily&gt;
+#                                    &lt;FontSize&gt;9pt&lt;/FontSize&gt;
+#                                  &lt;/Style&gt;
+#                                &lt;/TextRun&gt;
+#                              &lt;/TextRuns&gt;
+#                              &lt;Style /&gt;
+#                            &lt;/Paragraph&gt;
+#                          &lt;/Paragraphs&gt;
+#                          &lt;rd:DefaultName&gt;Textbox14&lt;/rd:DefaultName&gt;
+#                          &lt;Style&gt;
+#                            &lt;Border&gt;
+#                              &lt;Color&gt;LightGrey&lt;/Color&gt;
+#                              &lt;Style&gt;Solid&lt;/Style&gt;
+#                            &lt;/Border&gt;
+#                            &lt;PaddingLeft&gt;2pt&lt;/PaddingLeft&gt;
+#                            &lt;PaddingRight&gt;2pt&lt;/PaddingRight&gt;
+#                            &lt;PaddingTop&gt;2pt&lt;/PaddingTop&gt;
+#                            &lt;PaddingBottom&gt;2pt&lt;/PaddingBottom&gt;
+#                          &lt;/Style&gt;
+#                        &lt;/Textbox&gt;
+#                      &lt;/CellContents&gt;
+#                    &lt;/TablixCell&gt;
+#                    &lt;TablixCell&gt;
+#                      &lt;CellContents&gt;
+#                        &lt;Textbox Name=&quot;Textbox16&quot;&gt;
+#                          &lt;CanGrow&gt;true&lt;/CanGrow&gt;
+#                          &lt;KeepTogether&gt;true&lt;/KeepTogether&gt;
+#                          &lt;Paragraphs&gt;
+#                            &lt;Paragraph&gt;
+#                              &lt;TextRuns&gt;
+#                                &lt;TextRun&gt;
+#                                  &lt;Value&gt;=Sum(Fields!AmountMST.Value)&lt;/Value&gt;
+#                                  &lt;Style&gt;
+#                                    &lt;FontFamily&gt;Segoe UI&lt;/FontFamily&gt;
+#                                    &lt;FontSize&gt;9pt&lt;/FontSize&gt;
+#                                    &lt;Format&gt;n2&lt;/Format&gt;
+#                                  &lt;/Style&gt;
+#                                &lt;/TextRun&gt;
+#                              &lt;/TextRuns&gt;
+#                              &lt;Style /&gt;
+#                            &lt;/Paragraph&gt;
+#                          &lt;/Paragraphs&gt;
+#                          &lt;rd:DefaultName&gt;Textbox16&lt;/rd:DefaultName&gt;
+#                          &lt;Style&gt;
+#                            &lt;Border&gt;
+#                              &lt;Color&gt;LightGrey&lt;/Color&gt;
+#                              &lt;Style&gt;Solid&lt;/Style&gt;
+#                            &lt;/Border&gt;
+#                            &lt;PaddingLeft&gt;2pt&lt;/PaddingLeft&gt;
+#                            &lt;PaddingRight&gt;2pt&lt;/PaddingRight&gt;
+#                            &lt;PaddingTop&gt;2pt&lt;/PaddingTop&gt;
+#                            &lt;PaddingBottom&gt;2pt&lt;/PaddingBottom&gt;
+#                          &lt;/Style&gt;
+#                        &lt;/Textbox&gt;
+#                        &lt;rd:Selected&gt;true&lt;/rd:Selected&gt;
+#                      &lt;/CellContents&gt;
+#                    &lt;/TablixCell&gt;
+#                  &lt;/TablixCells&gt;
+#                &lt;/TablixRow&gt;
+#              &lt;/TablixRows&gt;
+#            &lt;/TablixBody&gt;
+#            &lt;TablixColumnHierarchy&gt;
+#              &lt;TablixMembers&gt;
+#                &lt;TablixMember /&gt;
+#                &lt;TablixMember /&gt;
+#                &lt;TablixMember /&gt;
+#                &lt;TablixMember /&gt;
+#                &lt;TablixMember /&gt;
+#                &lt;TablixMember /&gt;
+#              &lt;/TablixMembers&gt;
+#            &lt;/TablixColumnHierarchy&gt;
+#            &lt;TablixRowHierarchy&gt;
+#              &lt;TablixMembers&gt;
+#                &lt;TablixMember&gt;
+#                  &lt;KeepWithGroup&gt;After&lt;/KeepWithGroup&gt;
+#                &lt;/TablixMember&gt;
+#                &lt;TablixMember&gt;
+#                  &lt;Group Name=&quot;Details&quot; /&gt;
+#                &lt;/TablixMember&gt;
+#                &lt;TablixMember&gt;
+#                  &lt;KeepWithGroup&gt;Before&lt;/KeepWithGroup&gt;
+#                &lt;/TablixMember&gt;
+#              &lt;/TablixMembers&gt;
+#            &lt;/TablixRowHierarchy&gt;
+#            &lt;DataSetName&gt;Dataset1&lt;/DataSetName&gt;
+#            &lt;Height&gt;0.75in&lt;/Height&gt;
+#            &lt;Width&gt;6.48833in&lt;/Width&gt;
+#            &lt;Style&gt;
+#              &lt;Border&gt;
+#                &lt;Style&gt;None&lt;/Style&gt;
+#              &lt;/Border&gt;
+#            &lt;/Style&gt;
+#          &lt;/Tablix&gt;
+#        &lt;/ReportItems&gt;
+#        &lt;Height&gt;0.75in&lt;/Height&gt;
+#        &lt;Style /&gt;
+#      &lt;/Body&gt;
+#      &lt;Width&gt;6.48958in&lt;/Width&gt;
+#      &lt;Page&gt;
+#        &lt;PageHeader&gt;
+#          &lt;Height&gt;0.42708in&lt;/Height&gt;
+#          &lt;PrintOnFirstPage&gt;true&lt;/PrintOnFirstPage&gt;
+#          &lt;PrintOnLastPage&gt;true&lt;/PrintOnLastPage&gt;
+#          &lt;ReportItems&gt;
+#            &lt;Textbox Name=&quot;Textbox22&quot;&gt;
+#              &lt;CanGrow&gt;true&lt;/CanGrow&gt;
+#              &lt;KeepTogether&gt;true&lt;/KeepTogether&gt;
+#              &lt;Paragraphs&gt;
+#                &lt;Paragraph&gt;
+#                  &lt;TextRuns&gt;
+#                    &lt;TextRun&gt;
+#                      &lt;Value&gt;Vendor 1099 Details&lt;/Value&gt;
+#                      &lt;Style&gt;
+#                        &lt;FontFamily&gt;Segoe UI&lt;/FontFamily&gt;
+#                        &lt;FontSize&gt;9pt&lt;/FontSize&gt;
+#                        &lt;FontWeight&gt;Bold&lt;/FontWeight&gt;
+#                      &lt;/Style&gt;
+#                    &lt;/TextRun&gt;
+#                  &lt;/TextRuns&gt;
+#                  &lt;Style&gt;
+#                    &lt;TextAlign&gt;Center&lt;/TextAlign&gt;
+#                  &lt;/Style&gt;
+#                &lt;/Paragraph&gt;
+#              &lt;/Paragraphs&gt;
+#              &lt;rd:DefaultName&gt;Textbox22&lt;/rd:DefaultName&gt;
+#              &lt;Left&gt;2.0925in&lt;/Left&gt;
+#              &lt;Height&gt;0.3425in&lt;/Height&gt;
+#              &lt;Width&gt;1.72917in&lt;/Width&gt;
+#              &lt;Style&gt;
+#                &lt;Border&gt;
+#                  &lt;Style&gt;None&lt;/Style&gt;
+#                &lt;/Border&gt;
+#                &lt;PaddingLeft&gt;2pt&lt;/PaddingLeft&gt;
+#                &lt;PaddingRight&gt;2pt&lt;/PaddingRight&gt;
+#                &lt;PaddingTop&gt;2pt&lt;/PaddingTop&gt;
+#                &lt;PaddingBottom&gt;2pt&lt;/PaddingBottom&gt;
+#              &lt;/Style&gt;
+#            &lt;/Textbox&gt;
+#          &lt;/ReportItems&gt;
+#          &lt;Style&gt;
+#            &lt;Border&gt;
+#              &lt;Style&gt;None&lt;/Style&gt;
+#            &lt;/Border&gt;
+#          &lt;/Style&gt;
+#        &lt;/PageHeader&gt;
+#        &lt;PageFooter&gt;
+#          &lt;Height&gt;0.01042in&lt;/Height&gt;
+#          &lt;PrintOnFirstPage&gt;true&lt;/PrintOnFirstPage&gt;
+#          &lt;PrintOnLastPage&gt;true&lt;/PrintOnLastPage&gt;
+#          &lt;Style&gt;
+#            &lt;Border&gt;
+#              &lt;Style&gt;None&lt;/Style&gt;
+#            &lt;/Border&gt;
+#          &lt;/Style&gt;
+#        &lt;/PageFooter&gt;
+#        &lt;InteractiveHeight&gt;11in&lt;/InteractiveHeight&gt;
+#        &lt;InteractiveWidth&gt;8.5in&lt;/InteractiveWidth&gt;
+#        &lt;LeftMargin&gt;1in&lt;/LeftMargin&gt;
+#        &lt;RightMargin&gt;1in&lt;/RightMargin&gt;
+#        &lt;TopMargin&gt;1in&lt;/TopMargin&gt;
+#        &lt;BottomMargin&gt;1in&lt;/BottomMargin&gt;
+#        &lt;Style /&gt;
+#      &lt;/Page&gt;
+#    &lt;/ReportSection&gt;
+#  &lt;/ReportSections&gt;
+#  &lt;ReportParameters&gt;
+#    &lt;ReportParameter Name=&quot;AX_PartitionKey&quot;&gt;
+#      &lt;DataType&gt;String&lt;/DataType&gt;
+#      &lt;Nullable&gt;true&lt;/Nullable&gt;
+#      &lt;AllowBlank&gt;true&lt;/AllowBlank&gt;
+#      &lt;Prompt&gt;AX_PartitionKey&lt;/Prompt&gt;
+#      &lt;Hidden&gt;true&lt;/Hidden&gt;
+#    &lt;/ReportParameter&gt;
+#    &lt;ReportParameter Name=&quot;AX_UserContext&quot;&gt;
+#      &lt;DataType&gt;String&lt;/DataType&gt;
+#      &lt;Nullable&gt;true&lt;/Nullable&gt;
+#      &lt;AllowBlank&gt;true&lt;/AllowBlank&gt;
+#      &lt;Prompt&gt;AX_UserContext&lt;/Prompt&gt;
+#      &lt;Hidden&gt;true&lt;/Hidden&gt;
+#    &lt;/ReportParameter&gt;
+#    &lt;ReportParameter Name=&quot;AX_CompanyName&quot;&gt;
+#      &lt;DataType&gt;String&lt;/DataType&gt;
+#      &lt;DefaultValue&gt;
+#        &lt;Values&gt;
+#          &lt;Value&gt;=Microsoft.Dynamics.Framework.Reports.BuiltInMethods.GetUserCompany(Parameters!AX_UserContext.Value)&lt;/Value&gt;
+#        &lt;/Values&gt;
+#      &lt;/DefaultValue&gt;
+#      &lt;Prompt&gt;AX_CompanyName&lt;/Prompt&gt;
+#      &lt;Hidden&gt;true&lt;/Hidden&gt;
+#    &lt;/ReportParameter&gt;
+#    &lt;ReportParameter Name=&quot;AX_RenderingCulture&quot;&gt;
+#      &lt;DataType&gt;String&lt;/DataType&gt;
+#      &lt;Nullable&gt;true&lt;/Nullable&gt;
+#      &lt;AllowBlank&gt;true&lt;/AllowBlank&gt;
+#      &lt;Prompt&gt;AX_RenderingCulture&lt;/Prompt&gt;
+#      &lt;Hidden&gt;true&lt;/Hidden&gt;
+#    &lt;/ReportParameter&gt;
+#    &lt;ReportParameter Name=&quot;AX_ReportContext&quot;&gt;
+#      &lt;DataType&gt;String&lt;/DataType&gt;
+#      &lt;Nullable&gt;true&lt;/Nullable&gt;
+#      &lt;AllowBlank&gt;true&lt;/AllowBlank&gt;
+#      &lt;Prompt&gt;AX_ReportContext&lt;/Prompt&gt;
+#      &lt;Hidden&gt;true&lt;/Hidden&gt;
+#      &lt;UsedInQuery&gt;True&lt;/UsedInQuery&gt;
+#    &lt;/ReportParameter&gt;
+#    &lt;ReportParameter Name=&quot;AX_RdpPreProcessedId&quot;&gt;
+#      &lt;DataType&gt;String&lt;/DataType&gt;
+#      &lt;Nullable&gt;true&lt;/Nullable&gt;
+#      &lt;AllowBlank&gt;true&lt;/AllowBlank&gt;
+#      &lt;Prompt&gt;AX_RdpPreProcessedId&lt;/Prompt&gt;
+#      &lt;Hidden&gt;true&lt;/Hidden&gt;
+#    &lt;/ReportParameter&gt;
+#    &lt;ReportParameter Name=&quot;Dataset1_FromDate&quot;&gt;
+#      &lt;DataType&gt;DateTime&lt;/DataType&gt;
+#      &lt;Prompt&gt;@SYS5209&lt;/Prompt&gt;
+#    &lt;/ReportParameter&gt;
+#    &lt;ReportParameter Name=&quot;Dataset1_ToDate&quot;&gt;
+#      &lt;DataType&gt;DateTime&lt;/DataType&gt;
+#      &lt;Prompt&gt;@SYS14656&lt;/Prompt&gt;
+#    &lt;/ReportParameter&gt;
+#  &lt;/ReportParameters&gt;
+#  &lt;Language&gt;en-US&lt;/Language&gt;
+#  &lt;rd:ReportUnitType&gt;Inch&lt;/rd:ReportUnitType&gt;
+#  &lt;rd:ExpressionDialog&gt;Microsoft.Dynamics.Framework.Design.Reports.ExpressionEditor.ExpressionEditorDialog, Microsoft.Dynamics.Framework.Design.Reports&lt;/rd:ExpressionDialog&gt;
+#  &lt;rd:ReportID&gt;e07ed8a8-2822-48a8-825c-3e149c9b25f9&lt;/rd:ReportID&gt;
+#&lt;/Report&gt;">
+#      <DisableIndividualTransformation Name="DisableIndividualTransformation"/>
+#    </PrecisionDesign>
+#  </Report>
+#</Reports>
+    ENDMOXL
+    DESIGNS
+      SSRSREPORTDESIGN
+        PROPERTIES
+          Name                #PrecisionDesign1
+        ENDPROPERTIES
+        
+        CROSSREFERENCES
+#<CrossReferenceInfo>
+#    <CrossReferenceEntry>
+#        <ReferencedAotObjectName>Massey_PaymentDP</ReferencedAotObjectName>
+#        <xrefKind>10</xrefKind>
+#        <XrefReference>2</XrefReference>
+#    </CrossReferenceEntry>
+#    <CrossReferenceEntry>
+#        <ReferencedAotObjectName>Massey_PaymentDP.Massey_PaymentTmp</ReferencedAotObjectName>
+#        <xrefKind>11</xrefKind>
+#        <XrefReference>4</XrefReference>
+#    </CrossReferenceEntry>
+#    <CrossReferenceEntry>
+#        <ReferencedAotObjectName>Massey_PaymentDP.processReport</ReferencedAotObjectName>
+#        <xrefKind>11</xrefKind>
+#        <XrefReference>4</XrefReference>
+#    </CrossReferenceEntry>
+#    <CrossReferenceEntry>
+#        <ReferencedAotObjectName>Massey_PaymentTmp.AccountNum</ReferencedAotObjectName>
+#        <xrefKind>2</xrefKind>
+#        <XrefReference>1</XrefReference>
+#    </CrossReferenceEntry>
+#    <CrossReferenceEntry>
+#        <ReferencedAotObjectName>Massey_PaymentTmp</ReferencedAotObjectName>
+#        <xrefKind>1</xrefKind>
+#        <XrefReference>1</XrefReference>
+#    </CrossReferenceEntry>
+#    <CrossReferenceEntry>
+#        <ReferencedAotObjectName>Massey_PaymentTmp.AmountMST</ReferencedAotObjectName>
+#        <xrefKind>2</xrefKind>
+#        <XrefReference>1</XrefReference>
+#    </CrossReferenceEntry>
+#    <CrossReferenceEntry>
+#        <ReferencedAotObjectName>Massey_PaymentTmp.Name</ReferencedAotObjectName>
+#        <xrefKind>2</xrefKind>
+#        <XrefReference>1</XrefReference>
+#    </CrossReferenceEntry>
+#    <CrossReferenceEntry>
+#        <ReferencedAotObjectName>Massey_PaymentTmp.Tax1099Box</ReferencedAotObjectName>
+#        <xrefKind>2</xrefKind>
+#        <XrefReference>1</XrefReference>
+#    </CrossReferenceEntry>
+#    <CrossReferenceEntry>
+#        <ReferencedAotObjectName>Massey_PaymentTmp.Tax1099RegNum</ReferencedAotObjectName>
+#        <xrefKind>2</xrefKind>
+#        <XrefReference>1</XrefReference>
+#    </CrossReferenceEntry>
+#    <CrossReferenceEntry>
+#        <ReferencedAotObjectName>Massey_PaymentTmp.VendGroup</ReferencedAotObjectName>
+#        <xrefKind>2</xrefKind>
+#        <XrefReference>1</XrefReference>
+#    </CrossReferenceEntry>
+#    <CrossReferenceEntry>
+#        <ReferencedAotObjectName>@SYS5209</ReferencedAotObjectName>
+#        <xrefKind>19</xrefKind>
+#        <XrefReference>2</XrefReference>
+#    </CrossReferenceEntry>
+#    <CrossReferenceEntry>
+#        <ReferencedAotObjectName>@SYS14656</ReferencedAotObjectName>
+#        <xrefKind>19</xrefKind>
+#        <XrefReference>2</XrefReference>
+#    </CrossReferenceEntry>
+#    <CrossReferenceEntry>
+#        <ReferencedAotObjectName>Massey_PaymentTmp.AccountNum</ReferencedAotObjectName>
+#        <xrefKind>2</xrefKind>
+#        <XrefReference>2</XrefReference>
+#    </CrossReferenceEntry>
+#    <CrossReferenceEntry>
+#        <ReferencedAotObjectName>Massey_PaymentTmp</ReferencedAotObjectName>
+#        <xrefKind>1</xrefKind>
+#        <XrefReference>2</XrefReference>
+#    </CrossReferenceEntry>
+#    <CrossReferenceEntry>
+#        <ReferencedAotObjectName>Massey_PaymentTmp.Name</ReferencedAotObjectName>
+#        <xrefKind>2</xrefKind>
+#        <XrefReference>2</XrefReference>
+#    </CrossReferenceEntry>
+#    <CrossReferenceEntry>
+#        <ReferencedAotObjectName>Massey_PaymentTmp.VendGroup</ReferencedAotObjectName>
+#        <xrefKind>2</xrefKind>
+#        <XrefReference>2</XrefReference>
+#    </CrossReferenceEntry>
+#    <CrossReferenceEntry>
+#        <ReferencedAotObjectName>Massey_PaymentTmp.Tax1099RegNum</ReferencedAotObjectName>
+#        <xrefKind>2</xrefKind>
+#        <XrefReference>2</XrefReference>
+#    </CrossReferenceEntry>
+#    <CrossReferenceEntry>
+#        <ReferencedAotObjectName>Massey_PaymentTmp.Tax1099Box</ReferencedAotObjectName>
+#        <xrefKind>2</xrefKind>
+#        <XrefReference>2</XrefReference>
+#    </CrossReferenceEntry>
+#    <CrossReferenceEntry>
+#        <ReferencedAotObjectName>Massey_PaymentTmp.AmountMST</ReferencedAotObjectName>
+#        <xrefKind>2</xrefKind>
+#        <XrefReference>2</XrefReference>
+#    </CrossReferenceEntry>
+#</CrossReferenceInfo>
+        ENDCROSSREFERENCES
+        
+        RDL 97470
+#<?xml version="1.0" encoding="utf-8"?>
+#<Report xmlns:rd="http://schemas.microsoft.com/SQLServer/reporting/reportdesigner" xmlns:cl="http://schemas.microsoft.com/sqlserver/reporting/2010/01/componentdefinition" xmlns="http://schemas.microsoft.com/sqlserver/reporting/2010/01/reportdefinition">
+#  <AutoRefresh>0</AutoRefresh>
+#  <ReportSections>
+#    <ReportSection>
+#      <Body>
+#        <ReportItems>
+#          <Tablix Name="Tablix2">
+#            <TablixBody>
+#              <TablixColumns>
+#                <TablixColumn>
+#                  <Width>1in</Width>
+#                </TablixColumn>
+#                <TablixColumn>
+#                  <Width>1.48833in</Width>
+#                </TablixColumn>
+#                <TablixColumn>
+#                  <Width>1in</Width>
+#                </TablixColumn>
+#                <TablixColumn>
+#                  <Width>1in</Width>
+#                </TablixColumn>
+#                <TablixColumn>
+#                  <Width>1in</Width>
+#                </TablixColumn>
+#                <TablixColumn>
+#                  <Width>1in</Width>
+#                </TablixColumn>
+#              </TablixColumns>
+#              <TablixRows>
+#                <TablixRow>
+#                  <Height>0.25in</Height>
+#                  <TablixCells>
+#                    <TablixCell>
+#                      <CellContents>
+#                        <Textbox Name="Textbox5">
+#                          <CanGrow>true</CanGrow>
+#                          <KeepTogether>true</KeepTogether>
+#                          <Paragraphs>
+#                            <Paragraph>
+#                              <TextRuns>
+#                                <TextRun>
+#                                  <Value>Account Num</Value>
+#                                  <Style>
+#                                    <FontFamily>Segoe UI</FontFamily>
+#                                    <FontSize>9pt</FontSize>
+#                                    <FontWeight>Bold</FontWeight>
+#                                  </Style>
+#                                </TextRun>
+#                              </TextRuns>
+#                              <Style />
+#                            </Paragraph>
+#                          </Paragraphs>
+#                          <rd:DefaultName>Textbox5</rd:DefaultName>
+#                          <Style>
+#                            <Border>
+#                              <Color>LightGrey</Color>
+#                              <Style>Solid</Style>
+#                            </Border>
+#                            <PaddingLeft>2pt</PaddingLeft>
+#                            <PaddingRight>2pt</PaddingRight>
+#                            <PaddingTop>2pt</PaddingTop>
+#                            <PaddingBottom>2pt</PaddingBottom>
+#                          </Style>
+#                        </Textbox>
+#                      </CellContents>
+#                    </TablixCell>
+#                    <TablixCell>
+#                      <CellContents>
+#                        <Textbox Name="Textbox18">
+#                          <CanGrow>true</CanGrow>
+#                          <KeepTogether>true</KeepTogether>
+#                          <Paragraphs>
+#                            <Paragraph>
+#                              <TextRuns>
+#                                <TextRun>
+#                                  <Value>Name</Value>
+#                                  <Style>
+#                                    <FontFamily>Segoe UI</FontFamily>
+#                                    <FontSize>9pt</FontSize>
+#                                    <FontWeight>Bold</FontWeight>
+#                                  </Style>
+#                                </TextRun>
+#                              </TextRuns>
+#                              <Style />
+#                            </Paragraph>
+#                          </Paragraphs>
+#                          <rd:DefaultName>Textbox18</rd:DefaultName>
+#                          <Style>
+#                            <Border>
+#                              <Color>LightGrey</Color>
+#                              <Style>Solid</Style>
+#                            </Border>
+#                            <PaddingLeft>2pt</PaddingLeft>
+#                            <PaddingRight>2pt</PaddingRight>
+#                            <PaddingTop>2pt</PaddingTop>
+#                            <PaddingBottom>2pt</PaddingBottom>
+#                          </Style>
+#                        </Textbox>
+#                      </CellContents>
+#                    </TablixCell>
+#                    <TablixCell>
+#                      <CellContents>
+#                        <Textbox Name="Textbox11">
+#                          <CanGrow>true</CanGrow>
+#                          <KeepTogether>true</KeepTogether>
+#                          <Paragraphs>
+#                            <Paragraph>
+#                              <TextRuns>
+#                                <TextRun>
+#                                  <Value>Vend Group</Value>
+#                                  <Style>
+#                                    <FontFamily>Segoe UI</FontFamily>
+#                                    <FontSize>9pt</FontSize>
+#                                    <FontWeight>Bold</FontWeight>
+#                                  </Style>
+#                                </TextRun>
+#                              </TextRuns>
+#                              <Style />
+#                            </Paragraph>
+#                          </Paragraphs>
+#                          <rd:DefaultName>Textbox11</rd:DefaultName>
+#                          <Style>
+#                            <Border>
+#                              <Color>LightGrey</Color>
+#                              <Style>Solid</Style>
+#                            </Border>
+#                            <PaddingLeft>2pt</PaddingLeft>
+#                            <PaddingRight>2pt</PaddingRight>
+#                            <PaddingTop>2pt</PaddingTop>
+#                            <PaddingBottom>2pt</PaddingBottom>
+#                          </Style>
+#                        </Textbox>
+#                      </CellContents>
+#                    </TablixCell>
+#                    <TablixCell>
+#                      <CellContents>
+#                        <Textbox Name="Textbox13">
+#                          <CanGrow>true</CanGrow>
+#                          <KeepTogether>true</KeepTogether>
+#                          <Paragraphs>
+#                            <Paragraph>
+#                              <TextRuns>
+#                                <TextRun>
+#                                  <Value>Tax1099Reg Num</Value>
+#                                  <Style>
+#                                    <FontFamily>Segoe UI</FontFamily>
+#                                    <FontSize>9pt</FontSize>
+#                                    <FontWeight>Bold</FontWeight>
+#                                  </Style>
+#                                </TextRun>
+#                              </TextRuns>
+#                              <Style />
+#                            </Paragraph>
+#                          </Paragraphs>
+#                          <rd:DefaultName>Textbox13</rd:DefaultName>
+#                          <Style>
+#                            <Border>
+#                              <Color>LightGrey</Color>
+#                              <Style>Solid</Style>
+#                            </Border>
+#                            <PaddingLeft>2pt</PaddingLeft>
+#                            <PaddingRight>2pt</PaddingRight>
+#                            <PaddingTop>2pt</PaddingTop>
+#                            <PaddingBottom>2pt</PaddingBottom>
+#                          </Style>
+#                        </Textbox>
+#                      </CellContents>
+#                    </TablixCell>
+#                    <TablixCell>
+#                      <CellContents>
+#                        <Textbox Name="Textbox15">
+#                          <CanGrow>true</CanGrow>
+#                          <KeepTogether>true</KeepTogether>
+#                          <Paragraphs>
+#                            <Paragraph>
+#                              <TextRuns>
+#                                <TextRun>
+#                                  <Value>Tax1099Box</Value>
+#                                  <Style>
+#                                    <FontFamily>Segoe UI</FontFamily>
+#                                    <FontSize>9pt</FontSize>
+#                                    <FontWeight>Bold</FontWeight>
+#                                  </Style>
+#                                </TextRun>
+#                              </TextRuns>
+#                              <Style />
+#                            </Paragraph>
+#                          </Paragraphs>
+#                          <rd:DefaultName>Textbox15</rd:DefaultName>
+#                          <Style>
+#                            <Border>
+#                              <Color>LightGrey</Color>
+#                              <Style>Solid</Style>
+#                            </Border>
+#                            <PaddingLeft>2pt</PaddingLeft>
+#                            <PaddingRight>2pt</PaddingRight>
+#                            <PaddingTop>2pt</PaddingTop>
+#                            <PaddingBottom>2pt</PaddingBottom>
+#                          </Style>
+#                        </Textbox>
+#                      </CellContents>
+#                    </TablixCell>
+#                    <TablixCell>
+#                      <CellContents>
+#                        <Textbox Name="Textbox20">
+#                          <CanGrow>true</CanGrow>
+#                          <KeepTogether>true</KeepTogether>
+#                          <Paragraphs>
+#                            <Paragraph>
+#                              <TextRuns>
+#                                <TextRun>
+#                                  <Value>Amount MST</Value>
+#                                  <Style>
+#                                    <FontFamily>Segoe UI</FontFamily>
+#                                    <FontSize>9pt</FontSize>
+#                                    <FontWeight>Bold</FontWeight>
+#                                  </Style>
+#                                </TextRun>
+#                              </TextRuns>
+#                              <Style />
+#                            </Paragraph>
+#                          </Paragraphs>
+#                          <rd:DefaultName>Textbox20</rd:DefaultName>
+#                          <Style>
+#                            <Border>
+#                              <Color>LightGrey</Color>
+#                              <Style>Solid</Style>
+#                            </Border>
+#                            <PaddingLeft>2pt</PaddingLeft>
+#                            <PaddingRight>2pt</PaddingRight>
+#                            <PaddingTop>2pt</PaddingTop>
+#                            <PaddingBottom>2pt</PaddingBottom>
+#                          </Style>
+#                        </Textbox>
+#                      </CellContents>
+#                    </TablixCell>
+#                  </TablixCells>
+#                </TablixRow>
+#                <TablixRow>
+#                  <Height>0.25in</Height>
+#                  <TablixCells>
+#                    <TablixCell>
+#                      <CellContents>
+#                        <Textbox Name="AccountNum">
+#                          <CanGrow>true</CanGrow>
+#                          <KeepTogether>true</KeepTogether>
+#                          <Paragraphs>
+#                            <Paragraph>
+#                              <TextRuns>
+#                                <TextRun>
+#                                  <Value>=Fields!AccountNum.Value</Value>
+#                                  <Style>
+#                                    <FontFamily>Segoe UI</FontFamily>
+#                                    <FontSize>9pt</FontSize>
+#                                  </Style>
+#                                </TextRun>
+#                              </TextRuns>
+#                              <Style />
+#                            </Paragraph>
+#                          </Paragraphs>
+#                          <rd:DefaultName>AccountNum</rd:DefaultName>
+#                          <CustomProperties>
+#                            <CustomProperty>
+#                              <Name>AXDataType</Name>
+#                              <Value><![CDATA[String]]></Value>
+#                            </CustomProperty>
+#                            <CustomProperty>
+#                              <Name>AXEDTFormat</Name>
+#                              <Value><![CDATA[Massey_PaymentTmp.AccountNum]]></Value>
+#                            </CustomProperty>
+#                            <CustomProperty>
+#                              <Name>AXEDTTextAlign</Name>
+#                              <Value><![CDATA[Massey_PaymentTmp.AccountNum]]></Value>
+#                            </CustomProperty>
+#                            <CustomProperty>
+#                              <Name>AXEDTDirection</Name>
+#                              <Value><![CDATA[Massey_PaymentTmp.AccountNum]]></Value>
+#                            </CustomProperty>
+#                            <CustomProperty>
+#                              <Name>AXFieldName</Name>
+#                              <Value><![CDATA[AccountNum]]></Value>
+#                            </CustomProperty>
+#                          </CustomProperties>
+#                          <Style>
+#                            <Border>
+#                              <Color>LightGrey</Color>
+#                              <Style>Solid</Style>
+#                            </Border>
+#                            <PaddingLeft>2pt</PaddingLeft>
+#                            <PaddingRight>2pt</PaddingRight>
+#                            <PaddingTop>2pt</PaddingTop>
+#                            <PaddingBottom>2pt</PaddingBottom>
+#                          </Style>
+#                        </Textbox>
+#                      </CellContents>
+#                    </TablixCell>
+#                    <TablixCell>
+#                      <CellContents>
+#                        <Textbox Name="Name2">
+#                          <CanGrow>true</CanGrow>
+#                          <KeepTogether>true</KeepTogether>
+#                          <Paragraphs>
+#                            <Paragraph>
+#                              <TextRuns>
+#                                <TextRun>
+#                                  <Value>=Fields!Name.Value</Value>
+#                                  <Style>
+#                                    <FontFamily>Segoe UI</FontFamily>
+#                                    <FontSize>9pt</FontSize>
+#                                  </Style>
+#                                </TextRun>
+#                              </TextRuns>
+#                              <Style />
+#                            </Paragraph>
+#                          </Paragraphs>
+#                          <rd:DefaultName>Name2</rd:DefaultName>
+#                          <CustomProperties>
+#                            <CustomProperty>
+#                              <Name>AXDataType</Name>
+#                              <Value><![CDATA[String]]></Value>
+#                            </CustomProperty>
+#                            <CustomProperty>
+#                              <Name>AXEDTFormat</Name>
+#                              <Value><![CDATA[Massey_PaymentTmp.Name]]></Value>
+#                            </CustomProperty>
+#                            <CustomProperty>
+#                              <Name>AXEDTTextAlign</Name>
+#                              <Value><![CDATA[Massey_PaymentTmp.Name]]></Value>
+#                            </CustomProperty>
+#                            <CustomProperty>
+#                              <Name>AXEDTDirection</Name>
+#                              <Value><![CDATA[Massey_PaymentTmp.Name]]></Value>
+#                            </CustomProperty>
+#                            <CustomProperty>
+#                              <Name>AXFieldName</Name>
+#                              <Value><![CDATA[Name]]></Value>
+#                            </CustomProperty>
+#                          </CustomProperties>
+#                          <Style>
+#                            <Border>
+#                              <Color>LightGrey</Color>
+#                              <Style>Solid</Style>
+#                            </Border>
+#                            <PaddingLeft>2pt</PaddingLeft>
+#                            <PaddingRight>2pt</PaddingRight>
+#                            <PaddingTop>2pt</PaddingTop>
+#                            <PaddingBottom>2pt</PaddingBottom>
+#                          </Style>
+#                        </Textbox>
+#                      </CellContents>
+#                    </TablixCell>
+#                    <TablixCell>
+#                      <CellContents>
+#                        <Textbox Name="VendGroup">
+#                          <CanGrow>true</CanGrow>
+#                          <KeepTogether>true</KeepTogether>
+#                          <Paragraphs>
+#                            <Paragraph>
+#                              <TextRuns>
+#                                <TextRun>
+#                                  <Value>=Fields!VendGroup.Value</Value>
+#                                  <Style>
+#                                    <FontFamily>Segoe UI</FontFamily>
+#                                    <FontSize>9pt</FontSize>
+#                                  </Style>
+#                                </TextRun>
+#                              </TextRuns>
+#                              <Style />
+#                            </Paragraph>
+#                          </Paragraphs>
+#                          <rd:DefaultName>VendGroup</rd:DefaultName>
+#                          <CustomProperties>
+#                            <CustomProperty>
+#                              <Name>AXDataType</Name>
+#                              <Value><![CDATA[String]]></Value>
+#                            </CustomProperty>
+#                            <CustomProperty>
+#                              <Name>AXEDTFormat</Name>
+#                              <Value><![CDATA[Massey_PaymentTmp.VendGroup]]></Value>
+#                            </CustomProperty>
+#                            <CustomProperty>
+#                              <Name>AXEDTTextAlign</Name>
+#                              <Value><![CDATA[Massey_PaymentTmp.VendGroup]]></Value>
+#                            </CustomProperty>
+#                            <CustomProperty>
+#                              <Name>AXEDTDirection</Name>
+#                              <Value><![CDATA[Massey_PaymentTmp.VendGroup]]></Value>
+#                            </CustomProperty>
+#                            <CustomProperty>
+#                              <Name>AXFieldName</Name>
+#                              <Value><![CDATA[VendGroup]]></Value>
+#                            </CustomProperty>
+#                          </CustomProperties>
+#                          <Style>
+#                            <Border>
+#                              <Color>LightGrey</Color>
+#                              <Style>Solid</Style>
+#                            </Border>
+#                            <PaddingLeft>2pt</PaddingLeft>
+#                            <PaddingRight>2pt</PaddingRight>
+#                            <PaddingTop>2pt</PaddingTop>
+#                            <PaddingBottom>2pt</PaddingBottom>
+#                          </Style>
+#                        </Textbox>
+#                      </CellContents>
+#                    </TablixCell>
+#                    <TablixCell>
+#                      <CellContents>
+#                        <Textbox Name="Tax1099RegNum">
+#                          <CanGrow>true</CanGrow>
+#                          <KeepTogether>true</KeepTogether>
+#                          <Paragraphs>
+#                            <Paragraph>
+#                              <TextRuns>
+#                                <TextRun>
+#                                  <Value>=Fields!Tax1099RegNum.Value</Value>
+#                                  <Style>
+#                                    <FontFamily>Segoe UI</FontFamily>
+#                                    <FontSize>9pt</FontSize>
+#                                  </Style>
+#                                </TextRun>
+#                              </TextRuns>
+#                              <Style />
+#                            </Paragraph>
+#                          </Paragraphs>
+#                          <rd:DefaultName>Tax1099RegNum</rd:DefaultName>
+#                          <CustomProperties>
+#                            <CustomProperty>
+#                              <Name>AXDataType</Name>
+#                              <Value><![CDATA[String]]></Value>
+#                            </CustomProperty>
+#                            <CustomProperty>
+#                              <Name>AXEDTFormat</Name>
+#                              <Value><![CDATA[Massey_PaymentTmp.Tax1099RegNum]]></Value>
+#                            </CustomProperty>
+#                            <CustomProperty>
+#                              <Name>AXEDTTextAlign</Name>
+#                              <Value><![CDATA[Massey_PaymentTmp.Tax1099RegNum]]></Value>
+#                            </CustomProperty>
+#                            <CustomProperty>
+#                              <Name>AXEDTDirection</Name>
+#                              <Value><![CDATA[Massey_PaymentTmp.Tax1099RegNum]]></Value>
+#                            </CustomProperty>
+#                            <CustomProperty>
+#                              <Name>AXFieldName</Name>
+#                              <Value><![CDATA[Tax1099RegNum]]></Value>
+#                            </CustomProperty>
+#                          </CustomProperties>
+#                          <Style>
+#                            <Border>
+#                              <Color>LightGrey</Color>
+#                              <Style>Solid</Style>
+#                            </Border>
+#                            <PaddingLeft>2pt</PaddingLeft>
+#                            <PaddingRight>2pt</PaddingRight>
+#                            <PaddingTop>2pt</PaddingTop>
+#                            <PaddingBottom>2pt</PaddingBottom>
+#                          </Style>
+#                        </Textbox>
+#                      </CellContents>
+#                    </TablixCell>
+#                    <TablixCell>
+#                      <CellContents>
+#                        <Textbox Name="Tax1099Box">
+#                          <CanGrow>true</CanGrow>
+#                          <KeepTogether>true</KeepTogether>
+#                          <Paragraphs>
+#                            <Paragraph>
+#                              <TextRuns>
+#                                <TextRun>
+#                                  <Value>=Fields!Tax1099Box.Value</Value>
+#                                  <Style>
+#                                    <FontFamily>Segoe UI</FontFamily>
+#                                    <FontSize>9pt</FontSize>
+#                                  </Style>
+#                                </TextRun>
+#                              </TextRuns>
+#                              <Style />
+#                            </Paragraph>
+#                          </Paragraphs>
+#                          <rd:DefaultName>Tax1099Box</rd:DefaultName>
+#                          <CustomProperties>
+#                            <CustomProperty>
+#                              <Name>AXDataType</Name>
+#                              <Value><![CDATA[String]]></Value>
+#                            </CustomProperty>
+#                            <CustomProperty>
+#                              <Name>AXEDTFormat</Name>
+#                              <Value><![CDATA[Massey_PaymentTmp.Tax1099Box]]></Value>
+#                            </CustomProperty>
+#                            <CustomProperty>
+#                              <Name>AXEDTTextAlign</Name>
+#                              <Value><![CDATA[Massey_PaymentTmp.Tax1099Box]]></Value>
+#                            </CustomProperty>
+#                            <CustomProperty>
+#                              <Name>AXEDTDirection</Name>
+#                              <Value><![CDATA[Massey_PaymentTmp.Tax1099Box]]></Value>
+#                            </CustomProperty>
+#                            <CustomProperty>
+#                              <Name>AXFieldName</Name>
+#                              <Value><![CDATA[Tax1099Box]]></Value>
+#                            </CustomProperty>
+#                          </CustomProperties>
+#                          <Style>
+#                            <Border>
+#                              <Color>LightGrey</Color>
+#                              <Style>Solid</Style>
+#                            </Border>
+#                            <PaddingLeft>2pt</PaddingLeft>
+#                            <PaddingRight>2pt</PaddingRight>
+#                            <PaddingTop>2pt</PaddingTop>
+#                            <PaddingBottom>2pt</PaddingBottom>
+#                          </Style>
+#                        </Textbox>
+#                      </CellContents>
+#                    </TablixCell>
+#                    <TablixCell>
+#                      <CellContents>
+#                        <Textbox Name="AmountMST">
+#                          <CanGrow>true</CanGrow>
+#                          <KeepTogether>true</KeepTogether>
+#                          <Paragraphs>
+#                            <Paragraph>
+#                              <TextRuns>
+#                                <TextRun>
+#                                  <Value>=Fields!AmountMST.Value</Value>
+#                                  <Style>
+#                                    <FontFamily>Segoe UI</FontFamily>
+#                                    <FontSize>9pt</FontSize>
+#                                    <Format>n2</Format>
+#                                  </Style>
+#                                </TextRun>
+#                              </TextRuns>
+#                              <Style />
+#                            </Paragraph>
+#                          </Paragraphs>
+#                          <rd:DefaultName>AmountMST</rd:DefaultName>
+#                          <CustomProperties>
+#                            <CustomProperty>
+#                              <Name>AXDataType</Name>
+#                              <Value><![CDATA[Float]]></Value>
+#                            </CustomProperty>
+#                            <CustomProperty>
+#                              <Name>AXEDTFormat</Name>
+#                              <Value><![CDATA[Massey_PaymentTmp.AmountMST]]></Value>
+#                            </CustomProperty>
+#                            <CustomProperty>
+#                              <Name>AXEDTTextAlign</Name>
+#                              <Value><![CDATA[Massey_PaymentTmp.AmountMST]]></Value>
+#                            </CustomProperty>
+#                            <CustomProperty>
+#                              <Name>AXEDTDirection</Name>
+#                              <Value><![CDATA[Massey_PaymentTmp.AmountMST]]></Value>
+#                            </CustomProperty>
+#                            <CustomProperty>
+#                              <Name>AXFieldName</Name>
+#                              <Value><![CDATA[AmountMST]]></Value>
+#                            </CustomProperty>
+#                          </CustomProperties>
+#                          <Style>
+#                            <Border>
+#                              <Color>LightGrey</Color>
+#                              <Style>Solid</Style>
+#                            </Border>
+#                            <PaddingLeft>2pt</PaddingLeft>
+#                            <PaddingRight>2pt</PaddingRight>
+#                            <PaddingTop>2pt</PaddingTop>
+#                            <PaddingBottom>2pt</PaddingBottom>
+#                          </Style>
+#                        </Textbox>
+#                      </CellContents>
+#                    </TablixCell>
+#                  </TablixCells>
+#                </TablixRow>
+#                <TablixRow>
+#                  <Height>0.25in</Height>
+#                  <TablixCells>
+#                    <TablixCell>
+#                      <CellContents>
+#                        <Textbox Name="Textbox8">
+#                          <CanGrow>true</CanGrow>
+#                          <KeepTogether>true</KeepTogether>
+#                          <Paragraphs>
+#                            <Paragraph>
+#                              <TextRuns>
+#                                <TextRun>
+#                                  <Value />
+#                                  <Style>
+#                                    <FontFamily>Segoe UI</FontFamily>
+#                                    <FontSize>9pt</FontSize>
+#                                  </Style>
+#                                </TextRun>
+#                              </TextRuns>
+#                              <Style />
+#                            </Paragraph>
+#                          </Paragraphs>
+#                          <rd:DefaultName>Textbox8</rd:DefaultName>
+#                          <Style>
+#                            <Border>
+#                              <Color>LightGrey</Color>
+#                              <Style>Solid</Style>
+#                            </Border>
+#                            <PaddingLeft>2pt</PaddingLeft>
+#                            <PaddingRight>2pt</PaddingRight>
+#                            <PaddingTop>2pt</PaddingTop>
+#                            <PaddingBottom>2pt</PaddingBottom>
+#                          </Style>
+#                        </Textbox>
+#                      </CellContents>
+#                    </TablixCell>
+#                    <TablixCell>
+#                      <CellContents>
+#                        <Textbox Name="Textbox9">
+#                          <CanGrow>true</CanGrow>
+#                          <KeepTogether>true</KeepTogether>
+#                          <Paragraphs>
+#                            <Paragraph>
+#                              <TextRuns>
+#                                <TextRun>
+#                                  <Value />
+#                                  <Style>
+#                                    <FontFamily>Segoe UI</FontFamily>
+#                                    <FontSize>9pt</FontSize>
+#                                  </Style>
+#                                </TextRun>
+#                              </TextRuns>
+#                              <Style />
+#                            </Paragraph>
+#                          </Paragraphs>
+#                          <rd:DefaultName>Textbox9</rd:DefaultName>
+#                          <Style>
+#                            <Border>
+#                              <Color>LightGrey</Color>
+#                              <Style>Solid</Style>
+#                            </Border>
+#                            <PaddingLeft>2pt</PaddingLeft>
+#                            <PaddingRight>2pt</PaddingRight>
+#                            <PaddingTop>2pt</PaddingTop>
+#                            <PaddingBottom>2pt</PaddingBottom>
+#                          </Style>
+#                        </Textbox>
+#                      </CellContents>
+#                    </TablixCell>
+#                    <TablixCell>
+#                      <CellContents>
+#                        <Textbox Name="Textbox10">
+#                          <CanGrow>true</CanGrow>
+#                          <KeepTogether>true</KeepTogether>
+#                          <Paragraphs>
+#                            <Paragraph>
+#                              <TextRuns>
+#                                <TextRun>
+#                                  <Value />
+#                                  <Style>
+#                                    <FontFamily>Segoe UI</FontFamily>
+#                                    <FontSize>9pt</FontSize>
+#                                  </Style>
+#                                </TextRun>
+#                              </TextRuns>
+#                              <Style />
+#                            </Paragraph>
+#                          </Paragraphs>
+#                          <rd:DefaultName>Textbox10</rd:DefaultName>
+#                          <Style>
+#                            <Border>
+#                              <Color>LightGrey</Color>
+#                              <Style>Solid</Style>
+#                            </Border>
+#                            <PaddingLeft>2pt</PaddingLeft>
+#                            <PaddingRight>2pt</PaddingRight>
+#                            <PaddingTop>2pt</PaddingTop>
+#                            <PaddingBottom>2pt</PaddingBottom>
+#                          </Style>
+#                        </Textbox>
+#                      </CellContents>
+#                    </TablixCell>
+#                    <TablixCell>
+#                      <CellContents>
+#                        <Textbox Name="Textbox12">
+#                          <CanGrow>true</CanGrow>
+#                          <KeepTogether>true</KeepTogether>
+#                          <Paragraphs>
+#                            <Paragraph>
+#                              <TextRuns>
+#                                <TextRun>
+#                                  <Value />
+#                                  <Style>
+#                                    <FontFamily>Segoe UI</FontFamily>
+#                                    <FontSize>9pt</FontSize>
+#                                  </Style>
+#                                </TextRun>
+#                              </TextRuns>
+#                              <Style />
+#                            </Paragraph>
+#                          </Paragraphs>
+#                          <rd:DefaultName>Textbox12</rd:DefaultName>
+#                          <Style>
+#                            <Border>
+#                              <Color>LightGrey</Color>
+#                              <Style>Solid</Style>
+#                            </Border>
+#                            <PaddingLeft>2pt</PaddingLeft>
+#                            <PaddingRight>2pt</PaddingRight>
+#                            <PaddingTop>2pt</PaddingTop>
+#                            <PaddingBottom>2pt</PaddingBottom>
+#                          </Style>
+#                        </Textbox>
+#                      </CellContents>
+#                    </TablixCell>
+#                    <TablixCell>
+#                      <CellContents>
+#                        <Textbox Name="Textbox14">
+#                          <CanGrow>true</CanGrow>
+#                          <KeepTogether>true</KeepTogether>
+#                          <Paragraphs>
+#                            <Paragraph>
+#                              <TextRuns>
+#                                <TextRun>
+#                                  <Value />
+#                                  <Style>
+#                                    <FontFamily>Segoe UI</FontFamily>
+#                                    <FontSize>9pt</FontSize>
+#                                  </Style>
+#                                </TextRun>
+#                              </TextRuns>
+#                              <Style />
+#                            </Paragraph>
+#                          </Paragraphs>
+#                          <rd:DefaultName>Textbox14</rd:DefaultName>
+#                          <Style>
+#                            <Border>
+#                              <Color>LightGrey</Color>
+#                              <Style>Solid</Style>
+#                            </Border>
+#                            <PaddingLeft>2pt</PaddingLeft>
+#                            <PaddingRight>2pt</PaddingRight>
+#                            <PaddingTop>2pt</PaddingTop>
+#                            <PaddingBottom>2pt</PaddingBottom>
+#                          </Style>
+#                        </Textbox>
+#                      </CellContents>
+#                    </TablixCell>
+#                    <TablixCell>
+#                      <CellContents>
+#                        <Textbox Name="Textbox16">
+#                          <CanGrow>true</CanGrow>
+#                          <KeepTogether>true</KeepTogether>
+#                          <Paragraphs>
+#                            <Paragraph>
+#                              <TextRuns>
+#                                <TextRun>
+#                                  <Value>=Sum(Fields!AmountMST.Value)</Value>
+#                                  <Style>
+#                                    <FontFamily>Segoe UI</FontFamily>
+#                                    <FontSize>9pt</FontSize>
+#                                    <Format>n2</Format>
+#                                  </Style>
+#                                </TextRun>
+#                              </TextRuns>
+#                              <Style />
+#                            </Paragraph>
+#                          </Paragraphs>
+#                          <rd:DefaultName>Textbox16</rd:DefaultName>
+#                          <Style>
+#                            <Border>
+#                              <Color>LightGrey</Color>
+#                              <Style>Solid</Style>
+#                            </Border>
+#                            <PaddingLeft>2pt</PaddingLeft>
+#                            <PaddingRight>2pt</PaddingRight>
+#                            <PaddingTop>2pt</PaddingTop>
+#                            <PaddingBottom>2pt</PaddingBottom>
+#                          </Style>
+#                        </Textbox>
+#                        <rd:Selected>true</rd:Selected>
+#                      </CellContents>
+#                    </TablixCell>
+#                  </TablixCells>
+#                </TablixRow>
+#              </TablixRows>
+#            </TablixBody>
+#            <TablixColumnHierarchy>
+#              <TablixMembers>
+#                <TablixMember />
+#                <TablixMember />
+#                <TablixMember />
+#                <TablixMember />
+#                <TablixMember />
+#                <TablixMember />
+#              </TablixMembers>
+#            </TablixColumnHierarchy>
+#            <TablixRowHierarchy>
+#              <TablixMembers>
+#                <TablixMember>
+#                  <KeepWithGroup>After</KeepWithGroup>
+#                </TablixMember>
+#                <TablixMember>
+#                  <Group Name="Details" />
+#                </TablixMember>
+#                <TablixMember>
+#                  <KeepWithGroup>Before</KeepWithGroup>
+#                </TablixMember>
+#              </TablixMembers>
+#            </TablixRowHierarchy>
+#            <DataSetName>Dataset1</DataSetName>
+#            <Height>0.75in</Height>
+#            <Width>6.48833in</Width>
+#            <Style>
+#              <Border>
+#                <Style>None</Style>
+#              </Border>
+#            </Style>
+#          </Tablix>
+#        </ReportItems>
+#        <Height>0.75in</Height>
+#        <Style />
+#      </Body>
+#      <Width>6.48958in</Width>
+#      <Page>
+#        <PageHeader>
+#          <Height>0.42708in</Height>
+#          <PrintOnFirstPage>true</PrintOnFirstPage>
+#          <PrintOnLastPage>true</PrintOnLastPage>
+#          <ReportItems>
+#            <Textbox Name="Textbox22">
+#              <CanGrow>true</CanGrow>
+#              <KeepTogether>true</KeepTogether>
+#              <Paragraphs>
+#                <Paragraph>
+#                  <TextRuns>
+#                    <TextRun>
+#                      <Value>Vendor 1099 Details</Value>
+#                      <Style>
+#                        <FontFamily>Segoe UI</FontFamily>
+#                        <FontSize>9pt</FontSize>
+#                        <FontWeight>Bold</FontWeight>
+#                      </Style>
+#                    </TextRun>
+#                  </TextRuns>
+#                  <Style>
+#                    <TextAlign>Center</TextAlign>
+#                  </Style>
+#                </Paragraph>
+#              </Paragraphs>
+#              <rd:DefaultName>Textbox22</rd:DefaultName>
+#              <Left>2.0925in</Left>
+#              <Height>0.3425in</Height>
+#              <Width>1.72917in</Width>
+#              <Style>
+#                <Border>
+#                  <Style>None</Style>
+#                </Border>
+#                <PaddingLeft>2pt</PaddingLeft>
+#                <PaddingRight>2pt</PaddingRight>
+#                <PaddingTop>2pt</PaddingTop>
+#                <PaddingBottom>2pt</PaddingBottom>
+#              </Style>
+#            </Textbox>
+#          </ReportItems>
+#          <Style>
+#            <Border>
+#              <Style>None</Style>
+#            </Border>
+#          </Style>
+#        </PageHeader>
+#        <PageFooter>
+#          <Height>0.01042in</Height>
+#          <PrintOnFirstPage>true</PrintOnFirstPage>
+#          <PrintOnLastPage>true</PrintOnLastPage>
+#          <Style>
+#            <Border>
+#              <Style>None</Style>
+#            </Border>
+#          </Style>
+#        </PageFooter>
+#        <InteractiveHeight>11in</InteractiveHeight>
+#        <InteractiveWidth>8.5in</InteractiveWidth>
+#        <LeftMargin>1in</LeftMargin>
+#        <RightMargin>1in</RightMargin>
+#        <TopMargin>1in</TopMargin>
+#        <BottomMargin>1in</BottomMargin>
+#        <Style />
+#      </Page>
+#    </ReportSection>
+#  </ReportSections>
+#  <Language>en-US</Language>
+#  <rd:ReportUnitType>Inch</rd:ReportUnitType>
+#  <rd:ExpressionDialog>Microsoft.Dynamics.Framework.Design.Reports.ExpressionEditor.ExpressionEditorDialog, Microsoft.Dynamics.Framework.Design.Reports</rd:ExpressionDialog>
+#  <rd:ReportID>e07ed8a8-2822-48a8-825c-3e149c9b25f9</rd:ReportID>
+#  <DataSources>
+#    <DataSource Name="AutoGen__ReportDataProvider">
+#      <Transaction>true</Transaction>
+#      <ConnectionProperties>
+#        <DataProvider>AXREPORTDATAPROVIDER</DataProvider>
+#        <ConnectString />
+#        <IntegratedSecurity>true</IntegratedSecurity>
+#      </ConnectionProperties>
+#      <rd:DataSourceID>15c72cb8-6626-40d5-b654-91ea09a4837b</rd:DataSourceID>
+#    </DataSource>
+#  </DataSources>
+#  <DataSets>
+#    <DataSet Name="Dataset1">
+#      <Fields>
+#        <Field Name="AccountNum">
+#          <DataField>Massey_PaymentTmp.1.AccountNum</DataField>
+#          <rd:TypeName>System.String</rd:TypeName>
+#        </Field>
+#        <Field Name="AmountMST">
+#          <DataField>Massey_PaymentTmp.1.AmountMST</DataField>
+#          <rd:TypeName>System.Double</rd:TypeName>
+#        </Field>
+#        <Field Name="Name">
+#          <DataField>Massey_PaymentTmp.1.Name</DataField>
+#          <rd:TypeName>System.String</rd:TypeName>
+#        </Field>
+#        <Field Name="Tax1099Box">
+#          <DataField>Massey_PaymentTmp.1.Tax1099Box</DataField>
+#          <rd:TypeName>System.String</rd:TypeName>
+#        </Field>
+#        <Field Name="Tax1099RegNum">
+#          <DataField>Massey_PaymentTmp.1.Tax1099RegNum</DataField>
+#          <rd:TypeName>System.String</rd:TypeName>
+#        </Field>
+#        <Field Name="VendGroup">
+#          <DataField>Massey_PaymentTmp.1.VendGroup</DataField>
+#          <rd:TypeName>System.String</rd:TypeName>
+#        </Field>
+#      </Fields>
+#      <Query>
+#        <QueryParameters>
+#          <QueryParameter Name="AX_PartitionKey">
+#            <Value>=Parameters!AX_PartitionKey.Value</Value>
+#          </QueryParameter>
+#          <QueryParameter Name="AX_CompanyName">
+#            <Value>=Parameters!AX_CompanyName.Value</Value>
+#          </QueryParameter>
+#          <QueryParameter Name="AX_UserContext">
+#            <Value>=Parameters!AX_UserContext.Value</Value>
+#          </QueryParameter>
+#          <QueryParameter Name="AX_RenderingCulture">
+#            <Value>=Parameters!AX_RenderingCulture.Value</Value>
+#          </QueryParameter>
+#          <QueryParameter Name="AX_ReportContext">
+#            <Value>=Parameters!AX_ReportContext.Value</Value>
+#          </QueryParameter>
+#          <QueryParameter Name="AX_RdpPreProcessedId">
+#            <Value>=Parameters!AX_RdpPreProcessedId.Value</Value>
+#          </QueryParameter>
+#          <QueryParameter Name="FromDate">
+#            <Value>=Parameters!Dataset1_FromDate.Value</Value>
+#          </QueryParameter>
+#          <QueryParameter Name="ToDate">
+#            <Value>=Parameters!Dataset1_ToDate.Value</Value>
+#          </QueryParameter>
+#        </QueryParameters>
+#        <DataSourceName>AutoGen__ReportDataProvider</DataSourceName>
+#        <CommandType>Text</CommandType>
+#        <CommandText>SELECT * FROM Massey_PaymentDP.Massey_FixedAssetTmp</CommandText>
+#        <rd:UseGenericDesigner>true</rd:UseGenericDesigner>
+#      </Query>
+#      <rd:DataSetInfo>
+#        <rd:TableAdapterGetDataMethod>GetData</rd:TableAdapterGetDataMethod>
+#        <rd:DataSetName>Dataset1</rd:DataSetName>
+#        <rd:TableAdapterFillMethod>Fill</rd:TableAdapterFillMethod>
+#        <rd:TableAdapterName>FieldsTableAdapter</rd:TableAdapterName>
+#        <rd:TableName>Fields</rd:TableName>
+#      </rd:DataSetInfo>
+#    </DataSet>
+#  </DataSets>
+#  <ReportParameters>
+#    <ReportParameter Name="AX_PartitionKey">
+#      <DataType>String</DataType>
+#      <Nullable>true</Nullable>
+#      <Hidden>true</Hidden>
+#      <AllowBlank>true</AllowBlank>
+#      <Prompt>AX_PartitionKey</Prompt>
+#      <MultiValue>false</MultiValue>
+#    </ReportParameter>
+#    <ReportParameter Name="AX_UserContext">
+#      <DataType>String</DataType>
+#      <Nullable>true</Nullable>
+#      <Hidden>true</Hidden>
+#      <AllowBlank>true</AllowBlank>
+#      <Prompt>AX_UserContext</Prompt>
+#      <MultiValue>false</MultiValue>
+#    </ReportParameter>
+#    <ReportParameter Name="AX_CompanyName">
+#      <DataType>String</DataType>
+#      <Nullable>false</Nullable>
+#      <Hidden>true</Hidden>
+#      <DefaultValue>
+#        <Values>
+#          <Value>=Microsoft.Dynamics.Framework.Reports.BuiltInMethods.GetUserCompany(Parameters!AX_UserContext.Value)</Value>
+#        </Values>
+#      </DefaultValue>
+#      <AllowBlank>false</AllowBlank>
+#      <Prompt>AX_CompanyName</Prompt>
+#      <MultiValue>false</MultiValue>
+#    </ReportParameter>
+#    <ReportParameter Name="AX_RenderingCulture">
+#      <DataType>String</DataType>
+#      <Nullable>true</Nullable>
+#      <Hidden>true</Hidden>
+#      <AllowBlank>true</AllowBlank>
+#      <Prompt>AX_RenderingCulture</Prompt>
+#      <MultiValue>false</MultiValue>
+#    </ReportParameter>
+#    <ReportParameter Name="AX_ReportContext">
+#      <DataType>String</DataType>
+#      <Nullable>true</Nullable>
+#      <Hidden>true</Hidden>
+#      <AllowBlank>true</AllowBlank>
+#      <Prompt>AX_ReportContext</Prompt>
+#      <MultiValue>false</MultiValue>
+#      <UsedInQuery>True</UsedInQuery>
+#    </ReportParameter>
+#    <ReportParameter Name="AX_RdpPreProcessedId">
+#      <DataType>String</DataType>
+#      <Nullable>true</Nullable>
+#      <Hidden>true</Hidden>
+#      <AllowBlank>true</AllowBlank>
+#      <Prompt>AX_RdpPreProcessedId</Prompt>
+#      <MultiValue>false</MultiValue>
+#    </ReportParameter>
+#    <ReportParameter Name="Dataset1_FromDate">
+#      <DataType>DateTime</DataType>
+#      <Nullable>false</Nullable>
+#      <Hidden>false</Hidden>
+#      <AllowBlank>false</AllowBlank>
+#      <Prompt>From date</Prompt>
+#      <MultiValue>false</MultiValue>
+#    </ReportParameter>
+#    <ReportParameter Name="Dataset1_ToDate">
+#      <DataType>DateTime</DataType>
+#      <Nullable>false</Nullable>
+#      <Hidden>false</Hidden>
+#      <AllowBlank>false</AllowBlank>
+#      <Prompt>To date</Prompt>
+#      <MultiValue>false</MultiValue>
+#    </ReportParameter>
+#  </ReportParameters>
+#  <CodeModules>
+#    <CodeModule>Microsoft.Dynamics.Framework.Reports, Version=6.3.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35</CodeModule>
+#    <CodeModule>Microsoft.Dynamics.Framework.Metadata.AX, Version=6.3.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35</CodeModule>
+#  </CodeModules>
+#  <Code>Protected Overrides Sub OnInit()
+#    Microsoft.Dynamics.Framework.Reports.DataMethodUtility.ReportInitialize()
+#End Sub
+#
+#</Code>
+#  <CustomProperties>
+#    <CustomProperty>
+#      <Name>DATASETSFIELDS</Name>
+#      <Value><![CDATA[Dataset1:AccountNum.Massey_PaymentTmp.AccountNum;AmountMST.Massey_PaymentTmp.AmountMST;Name.Massey_PaymentTmp.Name;Tax1099Box.Massey_PaymentTmp.Tax1099Box;Tax1099RegNum.Massey_PaymentTmp.Tax1099RegNum;VendGroup.Massey_PaymentTmp.VendGroup]]></Value>
+#    </CustomProperty>
+#  </CustomProperties>
+#</Report>
+        ENDRDL
+        PERMISSIONSET #Permissions
+          PROPERTIES
+          ENDPROPERTIES
+          
+          TABLES #Tables
+          ENDTABLES
+          
+        SERVERMETHODS #Server Methods
+        ENDSERVERMETHODS
+        
+      ASSOCIATEDFORMS #Associated Forms
+      ENDASSOCIATEDFORMS
+      
+  ENDPERMISSIONSET
+  
+ENDSSRSREPORTDESIGN
+
+ENDDESIGNS
+
+ENDREPORT
+
+
+***Element: END
