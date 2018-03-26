@@ -1,0 +1,72 @@
+﻿Exportfile for AOT version 1.0 or later
+Formatversion: 1
+
+***Element: DBT
+
+; Microsoft Dynamics AX Table : TestTable unloaded
+; --------------------------------------------------------------------------------
+  TABLEVERSION 1
+  
+  TABLE #TestTable
+    EnforceFKRelation 1
+    PROPERTIES
+      Name                #TestTable
+      CreateRecIdIndex    #Yes
+      PrimaryIndex        #SurrogateKey
+      ClusterIndex        #SurrogateKey
+      Origin              #{65D55E0B-C91F-4D42-B961-37D935B8F93C}
+    ENDPROPERTIES
+    
+    FIELDS
+      FIELD #Field1
+        STRING
+        PROPERTIES
+          Name                #Field1
+          Table               #TestTable
+          Origin              #{539F2CB2-57FA-48E5-8754-6400732B0673}
+        ENDPROPERTIES
+        
+    ENDFIELDS
+    GROUPS
+    ENDGROUPS
+    
+    INDICES
+    ENDINDICES
+    FULLTEXTINDICES
+    ENDFULLTEXTINDICES
+    REFERENCES
+    ENDREFERENCES
+    
+    DELETEACTIONS
+    ENDDELETEACTIONS
+    
+    METHODS
+    ENDMETHODS
+  ENDTABLE
+  
+
+***Element: PRN
+
+; Microsoft Dynamics AX Project : test unloaded
+; --------------------------------------------------------------------------------
+  PROJECTVERSION 2
+  
+  PROJECT #test
+  SHARED
+  PROPERTIES
+    Name                #test
+    Origin              #{A9BEB7CA-B0B6-4E70-801E-DB4634CFDBED}
+  ENDPROPERTIES
+  
+    PROJECTCLASS ProjectNode
+    BEGINNODE
+      FILETYPE 0
+      UTILTYPE 44
+      UTILOBJECTID 106565
+      NODETYPE 204
+      NAME #TestTable
+    ENDNODE
+  ENDPROJECT
+  
+
+***Element: END
